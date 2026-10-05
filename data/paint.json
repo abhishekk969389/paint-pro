@@ -66,7 +66,7 @@
         "variants": {
           "PaintTopbar1": {
             "welcomeMessage": "Welcome to Professional Painting Services",
-            "timing": "Mon - Sat: 8:00 AM - 7:00 PM",
+            "timing": "Email Us: dummy@xyz.com",
             "socialLinks": [
               {
                 "platform": "facebook",

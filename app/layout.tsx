@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import Topbar from "./components/ui/topbar";
 import Navbar from "./components/ui/navbar";
 import Footer from "./components/ui/footer";
+import SmoothScroll from "./components/ui/smoothscroll";
 import { site } from "@/data/index";
 import "./globals.css";
 
@@ -24,14 +25,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${poppins.variable} ${poppins.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <header className="sticky top-0 z-50 w-full flex flex-col">
-          <Topbar />
-          <Navbar />
-        </header>
-        <div className="flex-grow">
-          {children}
-        </div>
-        <Footer/>
+        <SmoothScroll>
+          <header className="sticky top-0 z-50 w-full flex flex-col bg-white">
+            <Topbar />
+            <Navbar />
+          </header>
+          <div className="flex-grow">
+            {children}
+          </div>
+          <Footer/>
+        </SmoothScroll>
       </body>
     </html>
   );

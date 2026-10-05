@@ -3,6 +3,7 @@ import { FaMapMarkerAlt, FaClock, FaFacebookF, FaInstagram, FaYoutube, FaLinkedi
 import { site } from '@/data/index';
 import type { PaintTopbarData as TopbarData } from '@/data/index';
 import { TopbarLink } from '@/types/paint';
+import { MdOutlineMailOutline } from 'react-icons/md';
 
 const topbar: TopbarData = site.topbar;
 
@@ -23,7 +24,7 @@ const Topbar = () => {
       </div>
       <div className="hidden md:flex items-center space-x-6">
         <div className="flex items-center space-x-2">
-          <FaClock className="text-[#F97316] text-lg" />
+          <MdOutlineMailOutline className="text-[#F97316] text-lg" />
           <span>{topbar.timing}</span>
         </div>
         <div className="hidden md:block h-5 w-px bg-gray-500/50"></div>
