@@ -1,5 +1,5 @@
-import Subbanner from "../components/homelayout/subbanner";
-import GallerySection from "../components/homelayout/gallery";
+import Subbanner from '@/app/components/ui/subbanner';
+import GallerySection from '@/app/components/homelayout/gallery';
 
 export default function GalleryPage() {
   return (

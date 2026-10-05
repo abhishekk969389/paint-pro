@@ -1,5 +1,5 @@
-import Subbanner from "../components/homelayout/subbanner";
-import FaqSection from "../components/layout/faq/faqsec";
+import Subbanner from '@/app/components/ui/subbanner';
+import FaqSection from '@/app/components/layout/faq/faqsec';
 
 export default function FaqPage() {
   return (

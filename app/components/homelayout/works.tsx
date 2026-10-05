@@ -1,6 +1,5 @@
 "use client";
 
-import { Poppins } from "next/font/google";
 import {
   MdOutlinePhoneInTalk,
   MdOutlineCalendarMonth,
@@ -9,12 +8,12 @@ import {
   MdOutlineHome,
   MdAccessTime,
 } from "react-icons/md";
-import paintData from '../../../data/paint.json';
-import { PaintData, WorkStep } from '../../../types';
+import { site } from '@/data/index';
+import type { PaintHowItWorksData as WorksData } from '@/data/index';
+import { WorkStep } from '@/types/paint';
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
-const { works } = paintData as PaintData;
+const works: WorksData = site.howItWorks;
 
 const iconMap: Record<string, React.ElementType> = {
   MdOutlinePhoneInTalk,
@@ -35,8 +34,9 @@ function Arrow() {
 }
 
 export default function HowItWorksSection() {
+  if (!works) return null;
   return (
-    <section className={`${poppins.className} relative bg-white mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
+    <section className={`relative bg-white mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
       {/* dotted accents (no brush images) */}
       <div
         className="pointer-events-none absolute right-[22%] top-28 hidden h-24 w-24 opacity-40 lg:block"
@@ -66,8 +66,8 @@ export default function HowItWorksSection() {
 
         {/* Steps */}
         <div className="mt-8 flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:justify-between lg:gap-0">
-          {works.steps.map((s: WorkStep, i) => {
-            const t = works.tones[s.tone];
+          {works.steps.map((s: any, i) => {
+            const t = (works.tones as any)[s.tone];
             const Icon = iconMap[s.icon];
             const SecIcon = s.secondaryIcon ? iconMap[s.secondaryIcon] : null;
 

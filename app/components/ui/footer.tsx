@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Poppins } from "next/font/google";
 import { MdHome } from "react-icons/md";
 import {
   FaPaintRoller,
@@ -18,12 +17,12 @@ import {
   FaArrowUp,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import paintData from '../../../data/paint.json';
-import { PaintData, FooterContact, FooterLink, FooterPost, FooterSocial } from '../../../types';
+import { site } from '@/data/index';
+import type { PaintFooterData as FooterData } from '@/data/index';
+import { FooterContact, FooterLink, FooterPost, FooterSocial } from '@/types/paint';
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
-const { footer } = paintData as PaintData;
+const footer: FooterData = site.footer;
 
 const iconMap: Record<string, React.ElementType> = {
   FaPhoneAlt,
@@ -48,8 +47,9 @@ function Heading({ children }: { children: React.ReactNode }) {
 }
 
 export default function Footer() {
+  if (!footer) return null;
   return (
-    <footer className={`${poppins.className} relative overflow-hidden bg-[#08162b] text-slate-200 mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
+    <footer className={`relative overflow-hidden bg-[#08162b] text-slate-200 mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
       {/* background photo + dark overlay */}
       <div className="absolute inset-0">
         <Image src={footer.bgImage} alt="" fill sizes="100vw" className="object-cover opacity-30" aria-hidden="true" />

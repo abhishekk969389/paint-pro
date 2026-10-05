@@ -2,15 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Poppins } from "next/font/google";
 import { FiCheckCircle, FiMessageSquare, FiTool, FiDroplet, FiFileText, FiFile, FiChevronRight } from "react-icons/fi";
-import paintData from '../../../../data/paint.json';
-import { PaintData } from '../../../../types';
+import { site } from '@/data/index';
+import type { PaintServiceSidebarData as ServiceSidebarData } from '@/data/index';
 import ProcessSection from './processsec';
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
-const { serviceSidebar, serviceDetails } = paintData as PaintData;
+const serviceSidebar: ServiceSidebarData = site.serviceSidebar;
 
 const ICONS: Record<string, any> = {
   FiMessageSquare,
@@ -21,12 +19,12 @@ const ICONS: Record<string, any> = {
   FiFile
 };
 
-export default function ServiceDetailSection({ slug }: { slug: string }) {
-  // If the service doesn't exist, fallback to interior-painting for demonstration
-  const detail = serviceDetails[slug] || serviceDetails['interior-painting'];
+export default function ServiceDetailSection({ data: detail }: { data: any }) {
+  if (!detail) return null;
+  const slug = detail.slug;
 
   return (
-    <section className={`${poppins.className} mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
+    <section className={`mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-12 lg:gap-16 items-start">
           
@@ -53,7 +51,7 @@ export default function ServiceDetailSection({ slug }: { slug: string }) {
               <h3 className="text-[20px] font-bold text-[#0b1a3a] mb-5">{detail.subtitle}</h3>
 
               <div className="space-y-4">
-                {detail.content.map((p, i) => (
+                {detail.content.map((p: string, i: number) => (
                   <p key={i} className="text-[15px] leading-relaxed text-slate-500">{p}</p>
                 ))}
               </div>
@@ -72,7 +70,7 @@ export default function ServiceDetailSection({ slug }: { slug: string }) {
                   </p>
                   
                   <ul className="space-y-3">
-                    {detail.features.list.map((item, i) => (
+                    {detail.features.list.map((item: string, i: number) => (
                       <li key={i} className="flex items-center gap-3 text-[14px] font-semibold text-slate-600">
                         <FiCheckCircle className="h-[18px] w-[18px] text-orange-500 shrink-0" />
                         {item}

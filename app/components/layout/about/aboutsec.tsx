@@ -1,14 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { Poppins } from "next/font/google";
 import { Crown, BadgeCheck, Users, Clock, Headphones, Paintbrush } from "lucide-react";
-import paintData from '../../../../data/paint.json';
-import { PaintData, AboutSecFeature } from '../../../../types';
+import { site } from '@/data/index';
+import type { PaintAboutPageData as AboutSecData } from '@/data/index';
+import { AboutSecFeature } from '@/types/paint';
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
-const { aboutsec } = paintData as PaintData;
+const aboutsec: AboutSecData = site.aboutSec;
 
 const iconMap: Record<string, React.ElementType> = {
   BadgeCheck,
@@ -19,10 +18,11 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 export default function AboutSec() {
+  if (!aboutsec) return null;
   const FloatingIcon = iconMap[aboutsec.floatingCard.icon];
 
   return (
-    <section className={`${poppins.className} relative mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
+    <section className={`relative mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
       <div className="mx-auto max-w-[1450px] px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-14 items-stretch">
         
         {/* LEFT: Image Section */}
@@ -71,7 +71,7 @@ export default function AboutSec() {
 
           {/* Features Grid */}
           <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {aboutsec.features.map((f: AboutSecFeature) => {
+            {aboutsec.features.map((f: any) => {
               const Icon = iconMap[f.icon];
               const isOrange = f.tone === "orange";
               return (

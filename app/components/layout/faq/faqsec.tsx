@@ -2,13 +2,11 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Poppins } from "next/font/google";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
-import paintData from '../../../../data/paint.json';
-import { PaintData } from '../../../../types';
+import { site } from '@/data/index';
+import type { PaintFaqData as FaqSecData } from '@/data/index';
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
-const { faqSec } = paintData as PaintData;
+const faqSec: FaqSecData = site.faqSec;
 
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -17,8 +15,10 @@ export default function FaqSection() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  if (!faqSec) return null;
+
   return (
-    <section className={`${poppins.className} mt-8 sm:mt-10 md:mt-12 lg:mt-14 relative`}>
+    <section className={`mt-8 sm:mt-10 md:mt-12 lg:mt-14 relative`}>
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
           

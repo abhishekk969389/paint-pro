@@ -1,14 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { Poppins } from "next/font/google";
 import { Check, ArrowRight, PaintRoller, PaintBucket, ShieldCheck, Leaf } from "lucide-react";
-import paintData from '../../../data/paint.json';
-import { PaintData, AboutFeature } from '../../../types';
+import { site } from '@/data/index';
+import type { PaintAboutSectionData as AboutData } from '@/data/index';
+import { AboutFeature } from '@/types/paint';
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
-const { about } = paintData as PaintData;
+const about: AboutData = site.about;
 
 const iconMap: Record<string, React.ElementType> = {
   PaintRoller,
@@ -18,8 +17,9 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 export default function AboutSection() {
+  if (!about) return null;
   return (
-    <section className={`${poppins.className} relative bg-white`}>
+    <section className={`relative bg-white`}>
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-10 px-6 lg:grid-cols-[1fr_1.1fr_0.85fr] lg:gap-6 lg:px-10">
         {/* LEFT: text */}
         <div>

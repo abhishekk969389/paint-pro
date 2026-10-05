@@ -3,17 +3,18 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Poppins } from "next/font/google";
 import { FiArrowRight } from "react-icons/fi";
-import paintData from '../../../data/paint.json';
-import { PaintData, GalleryProject } from '../../../types';
+import { site } from '@/data/index';
+import type { PaintGalleryData as GalleryData } from '@/data/index';
+import { GalleryProject } from '@/types/paint';
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
-const { gallery } = paintData as PaintData;
+const gallery: GalleryData = site.gallerySec;
 
 export default function GallerySection({ showAll = false }: { showAll?: boolean }) {
   const [visibleCount, setVisibleCount] = useState(16);
+
+  if (!gallery) return null;
 
   const displayedProjects = showAll 
     ? gallery.projects.slice(0, visibleCount) 
@@ -24,7 +25,7 @@ export default function GallerySection({ showAll = false }: { showAll?: boolean 
   };
 
   return (
-    <section className={`${poppins.className} relative mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
+    <section className={`relative mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
       {/* right-top brush image: put sidebrush.png in /public */}
       <Image
         src="/sidebrush.png"

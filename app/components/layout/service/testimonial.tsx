@@ -2,28 +2,29 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Poppins } from "next/font/google";
 import { FaQuoteLeft, FaStar } from "react-icons/fa";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import paintData from '../../../../data/paint.json';
-import { PaintData, TestimonialItem } from '../../../../types';
+import { site } from '@/data/index';
+import type { PaintTestimonialData as TestimonialData } from '@/data/index';
+import { TestimonialItem } from '@/types/paint';
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
-const { testimonial } = paintData as PaintData;
+const testimonial: TestimonialData = site.testimonialSec;
 
 const PER_PAGE = 3;
 
 export default function TestimonialsSection() {
-  const pages = Math.ceil(testimonial.testimonials.length / PER_PAGE);
+  const pages = testimonial ? Math.ceil(testimonial.testimonials.length / PER_PAGE) : 0;
   const [page, setPage] = useState(0);
+
+  if (!testimonial) return null;
 
   const prev = () => setPage((p) => (p - 1 + pages) % pages);
   const next = () => setPage((p) => (p + 1) % pages);
   const visible = testimonial.testimonials.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE);
 
   return (
-    <section className={`${poppins.className} relative overflow-hidden mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
+    <section className={`relative overflow-hidden mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
       {/* right-top brush: put sidebrush.png in /public */}
       <Image
         src="/sidebrush.png"

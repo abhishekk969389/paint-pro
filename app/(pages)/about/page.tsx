@@ -1,7 +1,7 @@
-import AboutSection from "../components/homelayout/about";
-import Subbanner from "../components/homelayout/subbanner";
-import HowItWorksSection from "../components/homelayout/works";
-import AboutSec from "../components/layout/about/aboutsec";
+import AboutSection from '@/app/components/homelayout/about';
+import Subbanner from '@/app/components/ui/subbanner';
+import HowItWorksSection from '@/app/components/homelayout/works';
+import AboutSec from '@/app/components/layout/about/aboutsec';
 
 export default function AboutPage() {
   return (

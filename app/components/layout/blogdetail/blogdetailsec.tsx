@@ -1,20 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Poppins } from "next/font/google";
 import { FiCalendar, FiUser } from "react-icons/fi";
-import paintData from '../../../../data/paint.json';
-import { PaintData } from '../../../../types';
+import { site } from '@/data/index';
+import type { PaintBlogSidebarData as BlogSidebarData } from '@/data/index';
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
-const { blogSidebar, blogDetails } = paintData as PaintData;
+const blogSidebar: BlogSidebarData = site.blogSidebar;
 
-export default function BlogDetailSection({ slug }: { slug: string }) {
-  // Fallback to first post if slug not found
-  const detail = blogDetails[slug] || blogDetails['trending-wall-paint-colors'];
+export default function BlogDetailSection({ detail }: { detail: any }) {
+  if (!detail) return null;
 
   return (
-    <section className={`${poppins.className}  mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
+    <section className={` mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-12 lg:gap-16 items-start">
           

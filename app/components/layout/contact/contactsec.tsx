@@ -2,14 +2,12 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Poppins } from "next/font/google";
 import { FiMapPin, FiPhone, FiClock, FiUser, FiMail, FiEdit2 } from "react-icons/fi";
 import { RiArrowRightLine, RiArrowDownSLine } from "react-icons/ri";
-import paintData from '../../../../data/paint.json';
-import { PaintData } from '../../../../types';
+import { site } from '@/data/index';
+import type { PaintContactPageData as ContactSecData } from '@/data/index';
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
-const { contactSec } = paintData as PaintData;
+const contactSec: ContactSecData = site.contactSec;
 
 const ICONS: Record<string, any> = {
   FiMapPin,
@@ -18,6 +16,7 @@ const ICONS: Record<string, any> = {
 };
 
 export default function ContactSection() {
+  if (!contactSec) return null;
   const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
   const onChange = (e: any) => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -27,7 +26,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className={`${poppins.className} mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
+    <section className={`mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10 space-y-20 lg:space-y-28">
 
         {/* Info & Map Section */}

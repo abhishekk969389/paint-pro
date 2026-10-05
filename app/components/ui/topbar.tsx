@@ -1,9 +1,10 @@
 import React from 'react';
 import { FaMapMarkerAlt, FaClock, FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn } from 'react-icons/fa';
-import paintData from '../../../data/paint.json';
-import { PaintData, TopbarLink } from '../../../types';
+import { site } from '@/data/index';
+import type { PaintTopbarData as TopbarData } from '@/data/index';
+import { TopbarLink } from '@/types/paint';
 
-const { topbar } = paintData as PaintData;
+const topbar: TopbarData = site.topbar;
 
 const platformIcons: Record<string, React.ReactNode> = {
   facebook: <FaFacebookF />,
@@ -13,6 +14,7 @@ const platformIcons: Record<string, React.ReactNode> = {
 };
 
 const Topbar = () => {
+  if (!topbar) return null;
   return (
     <div className="bg-[#0B2F4C] text-white py-2 px-4 md:px-8 flex  flex-col md:flex-row justify-between items-center text-sm font-medium">
       <div className="flex items-center space-x-2 mb-2 md:mb-0">
@@ -26,7 +28,7 @@ const Topbar = () => {
         </div>
         <div className="hidden md:block h-5 w-px bg-gray-500/50"></div>
         <div className="flex items-center space-x-3">
-          {topbar.socialLinks.map((link: TopbarLink, index) => (
+          {topbar.socialLinks.map((link: any, index) => (
             <a
               key={index}
               href={link.url}

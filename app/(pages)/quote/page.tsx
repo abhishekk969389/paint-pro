@@ -1,5 +1,5 @@
-import Subbanner from "../components/homelayout/subbanner";
-import QuoteSection from "../components/layout/quote/quotesec";
+import Subbanner from '@/app/components/ui/subbanner';
+import QuoteSection from '@/app/components/layout/quote/quotesec';
 
 export default function QuotePage() {
     return (

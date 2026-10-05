@@ -2,14 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Poppins } from "next/font/google";
 import { PaintBucket, Home, Paintbrush, FileImage, Hammer, Building2, ArrowRight } from "lucide-react";
-import paintData from '../../../../data/paint.json';
-import { PaintData, ServiceSecCard } from '../../../../types';
+import { site } from '@/data/index';
+import type { PaintServicesPageData as ServiceSecData } from '@/data/index';
+import { ServiceSecCard } from '@/types/paint';
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
-const { servicesec } = paintData as PaintData;
+const servicesec: ServiceSecData = site.servicesSec;
 
 const iconMap: Record<string, React.ElementType> = {
     PaintBucket,
@@ -21,8 +20,9 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 export default function ServiceSec() {
+    if (!servicesec) return null;
     return (
-        <section className={`${poppins.className} relative mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
+        <section className={`relative mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
             <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
 
                 {/* Header Section */}

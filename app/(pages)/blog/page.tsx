@@ -1,4 +1,4 @@
-import Subbanner from "@/app/components/homelayout/subbanner";
+import Subbanner from '@/app/components/ui/subbanner';
 import BlogSection from "@/app/components/homelayout/blog";
 
 export default function BlogPage() {

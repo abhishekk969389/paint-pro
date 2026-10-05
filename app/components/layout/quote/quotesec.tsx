@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Poppins } from "next/font/google";
 import { FaRegFileAlt, FaPaintRoller, FaHome, FaBuilding } from "react-icons/fa";
 import { GiPaintBucket } from "react-icons/gi";
 import {
@@ -18,12 +17,11 @@ import {
   FiChevronDown,
 } from "react-icons/fi";
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
-import paintData from '../../../../data/paint.json';
-import { PaintData } from '../../../../types';
+import { site } from '@/data/index';
+import type { PaintQuotePageData as QuotePageSecData } from '@/data/index';
 
-const { quotePageSec } = paintData as PaintData;
+const quotePageSec: QuotePageSecData = site.quoteSec;
 
 const ICONS: Record<string, React.ElementType> = {
   FaRegFileAlt,
@@ -47,6 +45,7 @@ const inputCls =
   "w-full rounded-lg border border-slate-200 bg-slate-50/60 py-3.5 pl-10 pr-3 text-sm text-slate-700 placeholder:text-slate-400 outline-none transition focus:border-orange-400 focus:bg-white";
 
 export default function QuoteSection() {
+  if (!quotePageSec) return null;
   const [form, setForm] = useState({ name: "", email: "", phone: "", service: "", message: "" });
   const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -57,7 +56,7 @@ export default function QuoteSection() {
   };
 
   return (
-    <section className={`${poppins.className} mt-8 sm:mt-10 md:mt-12 lg:mt-14 mb-4`}>
+    <section className={`mt-8 sm:mt-10 md:mt-12 lg:mt-14 mb-4`}>
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-10 px-6 lg:grid-cols-[1.45fr_0.75fr] lg:px-10">
         {/* LEFT */}
         <div>

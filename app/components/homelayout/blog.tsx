@@ -2,21 +2,21 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Poppins } from "next/font/google";
 import { FiArrowRight } from "react-icons/fi";
 
-import paintData from '../../../data/paint.json';
-import { PaintData, BlogPost } from '../../../types';
+import { site } from '@/data/index';
+import type { PaintBlogData as BlogData } from '@/data/index';
+import { BlogPost } from '@/types/paint';
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
-const { blog } = paintData as PaintData;
+const blog: BlogData = site.ourBlogs;
 
 export default function BlogSection({ hideButton = false, maxPosts = 3 }: { hideButton?: boolean, maxPosts?: number } = {}) {
+  if (!blog) return null;
   const postsToShow = blog.posts.slice(0, maxPosts);
 
   return (
-    <section className={`${poppins.className} relative mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
+    <section className={`relative mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
       {/* right-top brush image: put sidebrush.png in /public */}
       <Image
         src="/sidebrush.png"

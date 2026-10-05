@@ -2,13 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaPhoneAlt, FaChevronDown } from 'react-icons/fa';
-import data from '../../../data/paint.json';
-import { PaintData } from '../../../types';
+import { site } from '@/data/index';
+import type { PaintHeaderData as HeaderData } from '@/data/index';
 
-const appData = data as PaintData;
-const { navbar } = appData;
+const navbar: HeaderData = site.navbar;
 
 const Navbar = () => {
+  if (!navbar) return null;
   return (
     <div className="bg-white py-4 px-4 md:px-8 flex justify-between items-center relative">
       <div className="flex items-center">

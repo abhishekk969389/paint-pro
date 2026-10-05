@@ -1,5 +1,5 @@
-import Subbanner from "../components/homelayout/subbanner";
-import ContactSection from "../components/layout/contact/contactsec";
+import Subbanner from '@/app/components/ui/subbanner';
+import ContactSection from '@/app/components/layout/contact/contactsec';
 
 export default function ContactPage() {
   return (

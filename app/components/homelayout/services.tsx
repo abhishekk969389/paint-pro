@@ -2,14 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Poppins } from "next/font/google";
 import { Check, ArrowRight, PaintRoller, House, Building2, Brush } from "lucide-react";
-import paintData from '../../../data/paint.json';
-import { PaintData, ServiceItem } from '../../../types';
+import { site } from '@/data/index';
+import type { PaintServicesData as ServicesData } from '@/data/index';
+import { ServiceItem } from '@/types/paint';
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
-const { services } = paintData as PaintData;
+const services: ServicesData = site.ourServices;
 
 const iconMap: Record<string, React.ElementType> = {
   PaintRoller,
@@ -19,8 +18,9 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 export default function ServicesSection() {
+  if (!services) return null;
   return (
-    <section className={`${poppins.className} bg-white mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
+    <section className={`bg-white mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 items-start gap-10 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-10">
         {/* LEFT */}
         <div>

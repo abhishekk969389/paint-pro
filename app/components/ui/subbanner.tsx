@@ -1,25 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Poppins } from "next/font/google";
 import { FaChevronRight } from "react-icons/fa";
-import paintData from '../../../data/paint.json';
-import { PaintData, SubbannerItem } from '../../../types';
+import { site } from '@/data/index';
+import type { PaintSubBannersData as SubBannersData } from '@/data/index';
+import { SubbannerItem } from '@/types/paint';
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
 
-const { subbanners } = paintData as PaintData;
+const subbanners: SubBannersData = site.subBanners;
 
 interface SubbannerProps {
   pageKey: string;
 }
 
 export default function Subbanner({ pageKey }: SubbannerProps) {
-  const data: SubbannerItem = subbanners[pageKey];
+  if (!subbanners) return null;
+  const data: SubbannerItem = (subbanners as any)[pageKey];
 
   if (!data) return null;
 
   return (
-    <div className={`${poppins.className} relative h-[300px] md:h-[360px] w-full overflow-hidden flex items-center`}>
+    <div className={`relative h-[300px] md:h-[360px] w-full overflow-hidden flex items-center`}>
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <Image 

@@ -2,17 +2,16 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Poppins } from "next/font/google";
 import { FiArrowUpRight } from "react-icons/fi";
-import paintData from '../../../../data/paint.json';
-import { PaintData } from '../../../../types';
+import { site } from '@/data/index';
+import type { PaintQuoteCtaData as QuoteSecData } from '@/data/index';
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"] });
-const { quotesection } = paintData as PaintData;
+const quotesection: QuoteSecData = site.quoteCta;
 
 export default function QuoteSec() {
+  if (!quotesection) return null;
   return (
-    <section className={`${poppins.className} relative w-full h-[320px] md:h-[320px] overflow-hidden flex items-center mt-12`}>
+    <section className={`relative w-full h-[320px] md:h-[320px] overflow-hidden flex items-center mt-12`}>
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <Image 

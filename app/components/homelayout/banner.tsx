@@ -6,10 +6,11 @@ import { HiOutlineShieldCheck } from 'react-icons/hi2';
 import { HiOutlineUsers } from 'react-icons/hi';
 import { FiClock, FiArrowUpRight } from 'react-icons/fi';
 import { FaPlay } from 'react-icons/fa';
-import paintData from '../../../data/paint.json';
-import { PaintData, BannerFeature } from '../../../types';
+import { site } from '@/data/index';
+import type { PaintBannerData as BannerData } from '@/data/index';
+import { BannerFeature } from '@/types/paint';
 
-const { banner } = paintData as PaintData;
+const banner: BannerData = site.banner;
 
 const iconMap: Record<string, React.ElementType> = {
   HiOutlineShieldCheck,
@@ -18,6 +19,7 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 export default function HeroBanner() {
+  if (!banner) return null;
   return (
     <section className="relative w-full bg-white pt-8 pb-16 lg:pt-12 font-sans overflow-hidden">
 
