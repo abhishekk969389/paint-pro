@@ -1,0 +1,1425 @@
+{
+  "banner": {
+    "badgeText": "Trusted Painting Experts",
+    "headline": {
+      "lines": [
+        "Professional",
+        "Painting Services",
+        "with a"
+      ],
+      "highlight": "Focus On Quality"
+    },
+    "features": [
+      {
+        "icon": "HiOutlineShieldCheck",
+        "text": "Premium Quality Paints"
+      },
+      {
+        "icon": "HiOutlineUsers",
+        "text": "Skilled & Trained Professionals"
+      },
+      {
+        "icon": "FiClock",
+        "text": "On-Time Completion"
+      }
+    ],
+    "floatingCard": {
+      "subtitle": "Book Your",
+      "titleLines": [
+        "Painting Service",
+        "with"
+      ],
+      "titleHighlight": "Home Rakshak",
+      "description": "Our team is committed to delivering exceptional painting services, backed by years of experience, precise preparation, and a true passion for transforming spaces with flawless finishes.",
+      "buttonText": "Get a Quote",
+      "buttonLink": "#quote"
+    },
+    "heroImage": {
+      "src": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2000&auto=format&fit=crop",
+      "alt": "Professional Painter"
+    },
+    "stats": [
+      {
+        "value": "10+",
+        "labelLines": [
+          "Years of",
+          "Experience"
+        ]
+      },
+      {
+        "value": "500+",
+        "labelLines": [
+          "Happy",
+          "Customers"
+        ]
+      },
+      {
+        "value": "1,000+",
+        "labelLines": [
+          "Projects",
+          "Completed"
+        ]
+      }
+    ]
+  },
+  "about": {
+    "badgeText": "ABOUT US",
+    "headline": {
+      "lines": [
+        "Bringing Colors",
+        "to"
+      ],
+      "highlight": "Brighter Spaces"
+    },
+    "description": "At Home Rakshak, we are passionate about transforming homes and commercial spaces with high-quality painting solutions. With years of experience, skilled professionals, and a commitment to excellence, we bring your vision to life with beautiful and long-lasting finishes.",
+    "points": [
+      "24/7 Customer Support",
+      "Skilled & Trained Painters",
+      "Premium Quality Paints",
+      "On-Time Project Completion"
+    ],
+    "buttonText": "More About Us",
+    "buttonLink": "/about",
+    "images": {
+      "painter": {
+        "src": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=80",
+        "alt": "Painter painting a wall orange"
+      },
+      "house": {
+        "src": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
+        "alt": "Modern house with orange accents"
+      }
+    },
+    "features": [
+      {
+        "icon": "PaintRoller",
+        "title": "Quality Workmanship",
+        "text": "We deliver flawless finishes with detail and precision."
+      },
+      {
+        "icon": "PaintBucket",
+        "title": "Wide Range of Services",
+        "text": "Interior, exterior, residential, commercial and more."
+      },
+      {
+        "icon": "ShieldCheck",
+        "title": "Reliable & Professional",
+        "text": "Skilled team, trusted process and on-time delivery."
+      },
+      {
+        "icon": "Leaf",
+        "title": "Safe & Eco-Friendly",
+        "text": "We use premium, low-odour and eco-friendly paints."
+      }
+    ]
+  },
+  "services": {
+    "badgeText": "OUR SERVICES",
+    "headline": {
+      "lines": [
+        "Fast, Reliable Painting Services for"
+      ],
+      "highlight": "Every Space"
+    },
+    "description": "From touch-ups to full makeovers, we offer reliable service, fair pricing, and a hassle-free experience — exactly how you want it!",
+    "buttonText": "All Services",
+    "buttonLink": "/services",
+    "list": [
+      {
+        "icon": "PaintRoller",
+        "title": "Interior Painting",
+        "text": "Transform your interiors with smooth, elegant and long-lasting paint finishes that match your style and enhance your living space.",
+        "points": [
+          "Smooth & flawless wall finishes",
+          "Premium paints, long-lasting look",
+          "Clean, quick & hassle-free service"
+        ],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=700&q=80",
+          "alt": "Painter rolling orange paint on an interior wall"
+        },
+        "cardBg": "bg-gradient-to-r from-rose-50 to-orange-50/60",
+        "iconBg": "bg-rose-100/80",
+        "bar": "bg-orange-600"
+      },
+      {
+        "icon": "House",
+        "title": "Exterior Painting",
+        "text": "Protect and beautify your property with weather-resistant exterior painting solutions designed for long-lasting durability.",
+        "points": [
+          "Weather-resistant long-lasting finish",
+          "Boost curb appeal instantly",
+          "Protection against sun, rain & dust"
+        ],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=700&q=80",
+          "alt": "Painter painting the exterior of a house"
+        },
+        "cardBg": "bg-gradient-to-r from-sky-50 to-blue-50/60",
+        "iconBg": "bg-orange-100/70",
+        "bar": "bg-blue-800"
+      },
+      {
+        "icon": "Building2",
+        "title": "Commercial Painting",
+        "text": "Professional painting solutions for offices, retail spaces, showrooms and commercial buildings with minimal disruption.",
+        "points": [
+          "Professional office & retail painting",
+          "Fast turnaround, minimal downtime",
+          "Durable, high-quality finishes"
+        ],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1504307651254-35680f356f58?auto=format&fit=crop&w=700&q=80",
+          "alt": "Painters working on a commercial building"
+        },
+        "cardBg": "bg-gradient-to-r from-orange-50 to-amber-50/60",
+        "iconBg": "bg-orange-100/80",
+        "bar": "bg-amber-500"
+      },
+      {
+        "icon": "Brush",
+        "title": "Decorative Painting",
+        "text": "Add personality to your space with creative and stylish decorative painting solutions for modern homes and offices.",
+        "points": [
+          "Stylish finishes for modern homes",
+          "Custom designs to match your style",
+          "Smooth, durable & long-lasting paint"
+        ],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1525909002-1b05e0c869d8?auto=format&fit=crop&w=700&q=80",
+          "alt": "Person doing decorative painting on a wall"
+        },
+        "cardBg": "bg-gradient-to-r from-pink-50 to-rose-50/60",
+        "iconBg": "bg-pink-100/70",
+        "bar": "bg-rose-500"
+      }
+    ]
+  },
+  "works": {
+    "badgeText": "HOW IT WORKS",
+    "headline": {
+      "lines": [
+        "From Consultation to"
+      ],
+      "highlight": "Beautiful Results"
+    },
+    "description": "We follow a simple and transparent process to make your painting experience smooth, hassle-free, and stress-free.",
+    "steps": [
+      {
+        "no": "01",
+        "title": "Get in Touch",
+        "text": "Contact us through call, WhatsApp or our enquiry form to discuss your requirements.",
+        "icon": "MdOutlinePhoneInTalk",
+        "tone": "orange"
+      },
+      {
+        "no": "02",
+        "title": "Site Visit & Consultation",
+        "text": "Our expert visits your space, understands your needs and suggests the best solutions and color options.",
+        "icon": "MdOutlineCalendarMonth",
+        "secondaryIcon": "MdAccessTime",
+        "tone": "blue"
+      },
+      {
+        "no": "03",
+        "title": "Get a Quote",
+        "text": "We provide a detailed and transparent quote with the right materials, timeline and finish options.",
+        "icon": "MdOutlineReceiptLong",
+        "secondaryText": "₹",
+        "tone": "orange"
+      },
+      {
+        "no": "04",
+        "title": "Painting Execution",
+        "text": "Our skilled team starts the project with proper preparation and high-quality materials for a flawless finish.",
+        "icon": "MdOutlineFormatPaint",
+        "tone": "blue"
+      },
+      {
+        "no": "05",
+        "title": "Enjoy the Results",
+        "text": "We complete the project on time and leave you with a beautifully painted space that you'll love for years.",
+        "icon": "MdOutlineHome",
+        "tone": "orange"
+      }
+    ],
+    "tones": {
+      "orange": {
+        "fill": "bg-orange-100/80",
+        "ring": "border-orange-300",
+        "badge": "bg-orange-600"
+      },
+      "blue": {
+        "fill": "bg-blue-50",
+        "ring": "border-blue-300",
+        "badge": "bg-[#0b1a3a]"
+      }
+    }
+  },
+  "gallery": {
+    "badgeText": "GALLERY",
+    "headline": {
+      "lines": [
+        "Our Latest"
+      ],
+      "highlight": "Painting Projects"
+    },
+    "description": "Take a look at some of our recent painting projects. From modern interiors to stunning exteriors, we bring colors to life.",
+    "buttonText": "View More",
+    "buttonLink": "/gallery",
+    "projects": [
+      {
+        "src": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=700&q=80",
+        "alt": "Living room with blue accent wall"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=700&q=80",
+        "alt": "Modern white house exterior"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=700&q=80",
+        "alt": "Bedroom with terracotta wall"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80",
+        "alt": "Bright staircase and hallway"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=700&q=80",
+        "alt": "House exterior with yellow accent"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=700&q=80",
+        "alt": "Colorful interior wall"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=80",
+        "alt": "Dining room with green wall"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80",
+        "alt": "Modern house with blue and yellow facade"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1595526114101-10c068305c6a?auto=format&fit=crop&w=700&q=80",
+        "alt": "Minimalist living room"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=700&q=80",
+        "alt": "Luxury interior design"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=700&q=80",
+        "alt": "Office interior painting"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=700&q=80",
+        "alt": "Bathroom renovation painting"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1560185127-6ed189bf02f4?auto=format&fit=crop&w=700&q=80",
+        "alt": "Bedroom with warm tones"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=700&q=80",
+        "alt": "Modern kitchen painting"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=700&q=80",
+        "alt": "Cozy living space"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1588854337115-1c67d9247e0d?auto=format&fit=crop&w=700&q=80",
+        "alt": "Study room painting project"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1521783988139-89397d761dce?auto=format&fit=crop&w=700&q=80",
+        "alt": "Living room painted"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=700&q=80",
+        "alt": "Elegant white bedroom"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1598928506311-c55dd1b48b61?auto=format&fit=crop&w=700&q=80",
+        "alt": "Contemporary living room"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=700&q=80",
+        "alt": "Classic interior"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=700&q=80",
+        "alt": "Kitchen walls"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=700&q=80",
+        "alt": "Small bedroom"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1617806118233-18e1c0945594?auto=format&fit=crop&w=700&q=80",
+        "alt": "Home office"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=700&q=80",
+        "alt": "Minimalist room"
+      }
+    ]
+  },
+  "blog": {
+    "badgeText": "OUR BLOG",
+    "headline": {
+      "lines": [
+        "Latest"
+      ],
+      "highlight": "Painting Tips & Ideas"
+    },
+    "description": "Explore our latest blogs for expert painting tips, color inspiration, and home improvement ideas.",
+    "buttonText": "View All Blog",
+    "buttonLink": "/blog",
+    "posts": [
+      {
+        "day": "12",
+        "month": "AUG",
+        "year": "2026",
+        "tag": "INTERIOR PAINTING",
+        "tagStyle": "bg-blue-100 text-blue-800",
+        "title": "Top 10 Trending Wall Paint Colors for Modern Homes",
+        "text": "Discover the most popular wall paint colors that can transform your home into a stylish and refreshing space.",
+        "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80",
+        "alt": "Living room with blue accent wall",
+        "href": "/blog/trending-wall-paint-colors"
+      },
+      {
+        "day": "18",
+        "month": "AUG",
+        "year": "2026",
+        "tag": "EXTERIOR PAINTING",
+        "tagStyle": "bg-orange-100 text-orange-700",
+        "title": "How to Choose the Best Exterior Paint for Your Home",
+        "text": "Learn what factors to consider when selecting exterior paint for long-lasting protection and beautiful curb appeal.",
+        "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
+        "alt": "Modern white house exterior",
+        "href": "/blog/best-exterior-paint"
+      },
+      {
+        "day": "25",
+        "month": "AUG",
+        "year": "2026",
+        "tag": "PAINTING TIPS",
+        "tagStyle": "bg-blue-100 text-blue-800",
+        "title": "Essential Painting Tips for a Flawless Finish",
+        "text": "Get expert tips and techniques to achieve a smooth, durable, and professional-looking paint finish.",
+        "image": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=800&q=80",
+        "alt": "Painter rolling orange paint on a wall",
+        "href": "/blog/essential-painting-tips"
+      },
+      {
+        "day": "02",
+        "month": "SEP",
+        "year": "2026",
+        "tag": "COMMERCIAL PAINTING",
+        "tagStyle": "bg-gray-100 text-gray-800",
+        "title": "Why Regular Office Painting Boosts Productivity",
+        "text": "Explore how fresh colors and a clean workspace can significantly improve employee morale and focus.",
+        "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+        "alt": "Modern painted office space",
+        "href": "/blog/office-painting-productivity"
+      },
+      {
+        "day": "14",
+        "month": "SEP",
+        "year": "2026",
+        "tag": "TEXTURE FINISH",
+        "tagStyle": "bg-orange-100 text-orange-700",
+        "title": "5 Unique Texture Finishes for Your Living Room",
+        "text": "Add character and depth to your plain walls with these five stunning and popular texture finishes.",
+        "image": "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&w=800&q=80",
+        "alt": "Textured wall finish example",
+        "href": "/blog/unique-texture-finishes"
+      },
+      {
+        "day": "22",
+        "month": "SEP",
+        "year": "2026",
+        "tag": "DECORATIVE PAINTING",
+        "tagStyle": "bg-blue-100 text-blue-800",
+        "title": "The Art of Faux Finishes: A Beginner's Guide",
+        "text": "Learn the basics of faux painting and how it can bring an artistic, luxurious feel to any room.",
+        "image": "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&w=800&q=80",
+        "alt": "Artistic faux finish wall",
+        "href": "/blog/faux-finishes-guide"
+      }
+    ]
+  },
+  "footer": {
+    "brandName": [
+      "Paint",
+      "Pro"
+    ],
+    "brandSubtitle": "PAINTING SOLUTIONS",
+    "description": "We bring colors to life with professional painting services for homes, offices, and commercial spaces. Quality, reliability, and customer satisfaction are at the heart of everything we do.",
+    "bgImage": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1600&q=70",
+    "contacts": [
+      {
+        "icon": "FaPhoneAlt",
+        "label": "Phone Number",
+        "value": "+91 98765 43210"
+      },
+      {
+        "icon": "FaEnvelope",
+        "label": "Email Address",
+        "value": "info@paintpro.com"
+      },
+      {
+        "icon": "FaMapMarkerAlt",
+        "label": "Address Location",
+        "value": "123, Main Street, New Delhi, India"
+      }
+    ],
+    "quickLinks": [
+      {
+        "name": "Home",
+        "href": "/"
+      },
+      {
+        "name": "About Us",
+        "href": "/about"
+      },
+      {
+        "name": "Our Services",
+        "href": "/services"
+      },
+      {
+        "name": "Gallery",
+        "href": "/gallery"
+      },
+      {
+        "name": "Blog",
+        "href": "/blog"
+      },
+      {
+        "name": "Get a Quote",
+        "href": "/quote"
+      },
+      {
+        "name": "Contact Us",
+        "href": "/contact"
+      }
+    ],
+    "services": [
+      "Interior Painting",
+      "Exterior Painting",
+      "Commercial Painting",
+      "Decorative Painting",
+      "Wallpaper Installation",
+      "Texture & Finish",
+      "Color Consultation"
+    ],
+    "posts": [
+      {
+        "title": "Top 10 Trending Wall Paint Colors for Modern Homes",
+        "date": "12 Aug 2026",
+        "img": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=300&q=80",
+        "href": "/blog/trending-wall-paint-colors"
+      },
+      {
+        "title": "How to Choose the Best Exterior Paint for Your Home",
+        "date": "18 Aug 2026",
+        "img": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=300&q=80",
+        "href": "/blog/best-exterior-paint"
+      },
+      {
+        "title": "Essential Painting Tips for a Flawless Finish",
+        "date": "25 Aug 2026",
+        "img": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=300&q=80",
+        "href": "/blog/essential-painting-tips"
+      }
+    ],
+    "copyright": "Copyright © 2026",
+    "socials": [
+      {
+        "icon": "FaFacebookF",
+        "label": "Facebook",
+        "href": "#"
+      },
+      {
+        "icon": "FaXTwitter",
+        "label": "X",
+        "href": "#"
+      },
+      {
+        "icon": "FaLinkedinIn",
+        "label": "LinkedIn",
+        "href": "#"
+      },
+      {
+        "icon": "FaInstagram",
+        "label": "Instagram",
+        "href": "#"
+      },
+      {
+        "icon": "FaYoutube",
+        "label": "YouTube",
+        "href": "#"
+      }
+    ]
+  },
+  "topbar": {
+    "welcomeMessage": "Welcome to PaintPro - Professional Painting Services",
+    "timing": "Mon-Sat: 9:00 AM - 6:00 PM",
+    "socialLinks": [
+      {
+        "platform": "facebook",
+        "url": "#"
+      },
+      {
+        "platform": "instagram",
+        "url": "#"
+      },
+      {
+        "platform": "youtube",
+        "url": "#"
+      },
+      {
+        "platform": "linkedin",
+        "url": "#"
+      }
+    ]
+  },
+  "subbanners": {
+    "about": {
+      "title": "About Us",
+      "bgImage": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1600&q=80",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "About Us",
+          "href": "/about"
+        }
+      ]
+    },
+    "services": {
+      "title": "Our Services",
+      "bgImage": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1600&q=80",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Services",
+          "href": "/services"
+        }
+      ]
+    },
+    "gallery": {
+      "title": "Our Gallery",
+      "bgImage": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Our Gallery",
+          "href": "/gallery"
+        }
+      ]
+    },
+    "blog": {
+      "title": "Our Blogs",
+      "bgImage": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1600&q=80",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Our Blogs",
+          "href": "/blog"
+        }
+      ]
+    },
+    "quote": {
+      "title": "Get a Quote",
+      "bgImage": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1600&q=80",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Get a Quote",
+          "href": "/quote"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Faqs",
+      "bgImage": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1600&q=80",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Faqs",
+          "href": "/faq"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact Us",
+      "bgImage": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1600&q=80",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Contact Us",
+          "href": "/contact"
+        }
+      ]
+    },
+    "blogdetail": {
+      "title": "Blog Details",
+      "bgImage": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1600&q=80",
+      "breadcrumbs": [
+        { "label": "Home", "href": "/" },
+        { "label": "Blog", "href": "/blog" },
+        { "label": "Blog Details", "href": "#" }
+      ]
+    },
+    "servicedetails": {
+      "title": "Services Details",
+      "bgImage": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1600&q=80",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Services",
+          "href": "/service"
+        },
+        {
+          "label": "Services Details",
+          "href": "#"
+        }
+      ]
+    }
+  },
+  "aboutsec": {
+    "badgeText": "Why Choose Us",
+    "headline": {
+      "lines": [
+        "Discover The Advantages",
+        "Of Our"
+      ],
+      "highlight": "Painting Services."
+    },
+    "description": "We deliver high-quality painting solutions with a focus on durability, aesthetics, and customer satisfaction. Our skilled team ensures every project is completed with precision and care.",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=900&q=80",
+      "alt": "Painter rolling paint on ceiling"
+    },
+    "features": [
+      {
+        "icon": "BadgeCheck",
+        "title": "Quality Work",
+        "text": "We use premium paints and materials for long-lasting results.",
+        "tone": "orange"
+      },
+      {
+        "icon": "Users",
+        "title": "Experienced Team",
+        "text": "Skilled and trained professionals with years of experience.",
+        "tone": "blue"
+      },
+      {
+        "icon": "Clock",
+        "title": "On-Time Delivery",
+        "text": "We value your time and complete projects as promised.",
+        "tone": "orange"
+      },
+      {
+        "icon": "Headphones",
+        "title": "Customer Support",
+        "text": "Always available to answer your questions and assist you.",
+        "tone": "blue"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Painting & Renovation",
+        "percentage": 90
+      },
+      {
+        "name": "Design & Color Consultation",
+        "percentage": 85
+      },
+      {
+        "name": "Interior Painting",
+        "percentage": 80
+      },
+      {
+        "name": "Exterior Painting",
+        "percentage": 75
+      }
+    ],
+    "floatingCard": {
+      "icon": "Paintbrush",
+      "subtitle": "Let's Make Your Space Beautiful",
+      "titleLines": [
+        "Transform Your Home",
+        "With Professional"
+      ],
+      "titleHighlight": "Painting Services."
+    }
+  },
+  "servicesec": {
+    "badgeText": "OUR SERVICES",
+    "headline": {
+      "lines": [
+        "Professional"
+      ],
+      "highlight": "Painting Services"
+    },
+    "description": "We offer a complete range of painting solutions for homes, offices, and commercial spaces with high-quality finishes and long-lasting results.",
+    "cards": [
+      {
+        "icon": "PaintBucket",
+        "title": "Interior Painting",
+        "text": "Transform your interiors with beautiful colors and premium finishes that enhance the look and feel of your space.",
+        "image": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=600&q=80",
+        "link": "/services/interior"
+      },
+      {
+        "icon": "Home",
+        "title": "Exterior Painting",
+        "text": "Protect and beautify your property with weather-resistant exterior paints designed for long-lasting durability.",
+        "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80",
+        "link": "/services/exterior"
+      },
+      {
+        "icon": "Paintbrush",
+        "title": "Decorative Painting",
+        "text": "Add a touch of creativity to your walls with textures, stencils, and custom decorative paint finishes.",
+        "image": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=600&q=80",
+        "link": "/services/decorative"
+      },
+      {
+        "icon": "FileImage",
+        "title": "Wallpaper Installation",
+        "text": "Choose from a wide range of designer wallpapers to give your space a modern and elegant look.",
+        "image": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80",
+        "link": "/services/wallpaper"
+      },
+      {
+        "icon": "Hammer",
+        "title": "Texture & Finish",
+        "text": "Enhance your walls with premium textures and stylish finishes for a unique and luxurious appearance.",
+        "image": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80",
+        "link": "/services/texture"
+      },
+      {
+        "icon": "Building2",
+        "title": "Commercial Painting",
+        "text": "Professional painting solutions for offices, retail spaces, and commercial buildings with minimal disruption.",
+        "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80",
+        "link": "/services/commercial"
+      }
+    ]
+  },
+  "quotesection": {
+    "bgImage": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1600&q=80",
+    "badgeText": "GET A QUOTE",
+    "headline": {
+      "line1": "Get A Free",
+      "highlight": "Painting Quote",
+      "line2": "Today !"
+    },
+    "button": {
+      "text": "GET A QUOTE",
+      "link": "/quote"
+    }
+  },
+  "testimonial": {
+    "badgeText": "TESTIMONIALS",
+    "headline": {
+      "text": "What Our",
+      "highlight": "Clients Say"
+    },
+    "description": "Hear from our happy customers who have transformed their spaces with our professional painting services.",
+    "testimonials": [
+      {
+        "name": "Rohit Sharma",
+        "role": "Homeowner, Noida",
+        "text": "PaintPro did an amazing job on our home interior. The team was professional, on time, and the quality of work exceeded our expectations. Our house looks completely refreshed!",
+        "img": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&crop=faces&w=200&h=200&q=80"
+      },
+      {
+        "name": "Priya Mehta",
+        "role": "Apartment Owner, Delhi",
+        "text": "Excellent service and great attention to detail. They helped us choose the right color combinations and delivered a flawless finish. Highly recommended for anyone looking for reliable painters.",
+        "img": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&crop=faces&w=200&h=200&q=80"
+      },
+      {
+        "name": "Amit Verma",
+        "role": "Business Owner, Gurgaon",
+        "text": "We hired PaintPro for our office renovation and the results are fantastic. The team finished the work on time with minimal disruption. Professional, clean, and high-quality work.",
+        "img": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&crop=faces&w=200&h=200&q=80"
+      },
+      {
+        "name": "Neha Kapoor",
+        "role": "Villa Owner, Gurgaon",
+        "text": "The exterior of our villa looks brand new. The painters were skilled, polite and cleaned up after every day of work. We love the weather-resistant finish.",
+        "img": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&crop=faces&w=200&h=200&q=80"
+      },
+      {
+        "name": "Karan Malhotra",
+        "role": "Homeowner, Delhi",
+        "text": "Fair pricing, honest advice and a beautiful result. They finished the full makeover of our flat a day early. I would happily hire them again.",
+        "img": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&crop=faces&w=200&h=200&q=80"
+      },
+      {
+        "name": "Sneha Gupta",
+        "role": "Shop Owner, Noida",
+        "text": "Our showroom needed a quick refresh and PaintPro delivered exactly what we wanted. Great color suggestions and zero mess. Truly professional.",
+        "img": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&crop=faces&w=200&h=200&q=80"
+      }
+    ]
+  },
+  "quotePageSec": {
+    "badgeText": "GET A QUOTE",
+    "headline": {
+      "text1": "Request Your",
+      "highlight": "Painting",
+      "text2": "Quote"
+    },
+    "description": "Share your painting requirements with us and our team will get back to you with the best quote, customized to your needs. It's quick, free and with no obligation.",
+    "features": [
+      {
+        "icon": "FaRegFileAlt",
+        "title": "Free Consultation",
+        "text": "Get expert advice for your painting project"
+      },
+      {
+        "icon": "FaPaintRoller",
+        "title": "Customized Quote",
+        "text": "Tailored solutions as per your needs"
+      },
+      {
+        "icon": "FiClock",
+        "title": "Quick Response",
+        "text": "We respond to all enquiries within 24 hours"
+      },
+      {
+        "icon": "FiHeadphones",
+        "title": "Dedicated Support",
+        "text": "Our team is always here to assist you"
+      }
+    ],
+    "services": [
+      "Interior Painting",
+      "Exterior Painting",
+      "Commercial Painting",
+      "Decorative Painting",
+      "Texture & Finish",
+      "Color Consultation"
+    ],
+    "form": {
+      "title1": "Get a",
+      "titleHighlight": "Free Quote",
+      "subtitle": "Fill out the form below and we'll get back to you shortly.",
+      "buttonText": "GET A QUOTE",
+      "securityText": "Your information is safe with us. We never share your details.",
+      "fields": {
+        "name": "Your Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "service": "Select Service",
+        "message": "Your Message (e.g. area size, rooms, preferred colors, etc.)"
+      }
+    },
+    "image": {
+      "src": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=80",
+      "alt": "Smiling painter holding a paint roller"
+    },
+    "card": {
+      "title1": "Transform Your Space",
+      "highlight": "New Colors!",
+      "text": "Get a personalized quote for your home or office painting project today.",
+      "promoServices": [
+        { "icon": "FaHome", "a": "Interior", "b": "Painting" },
+        { "icon": "FaBuilding", "a": "Exterior", "b": "Painting" },
+        { "icon": "FaPaintRoller", "a": "Commercial", "b": "Painting" }
+      ]
+    }
+  },
+  "faqSec": {
+    "badgeText": "QUESTIONS & ANSWERS",
+    "headline": {
+      "text1": "Have Any Questions? Find Your",
+      "highlight": "Answers Here!"
+    },
+    "description": "Get answers to the most common questions about our painting services, process, pricing and more. If you still have a question, feel free to contact our team anytime.",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1589834390005-5d4fb9bf3d32?auto=format&fit=crop&w=800&q=80",
+      "alt": "Female painter holding a roller and smiling"
+    },
+    "faqs": [
+      {
+        "q": "How do I choose the right paint for my home?",
+        "a": "Our experts help you choose the best paint based on your space, style, budget, and durability needs. We suggest high-quality, long-lasting paints that suit your interiors or exteriors and provide the best finish."
+      },
+      {
+        "q": "How long does a painting project take?",
+        "a": "The duration depends on the size of the project. A single room may take 1-2 days, while a full exterior painting can take up to a week. We provide an estimated timeline during our consultation."
+      },
+      {
+        "q": "Do you provide color consultation?",
+        "a": "Yes! Our color experts can help you select the perfect palette for your space, taking lighting, architecture, and your personal style into account."
+      },
+      {
+        "q": "Will you move furniture before painting?",
+        "a": "Yes, we handle all the heavy lifting. We carefully move your furniture and cover it completely with protective sheets to ensure zero damage or paint spills."
+      },
+      {
+        "q": "Is there any warranty on the painting work?",
+        "a": "Absolutely. We stand by our quality and offer a comprehensive warranty on our painting services against peeling or blistering."
+      },
+      {
+        "q": "Can you match an existing color?",
+        "a": "Yes, we use advanced color-matching technology to perfectly replicate your existing wall color for seamless touch-ups."
+      }
+    ]
+  },
+  "contactSec": {
+    "info": {
+      "title": "Contact Information",
+      "cards": [
+        {
+          "icon": "FiMapPin",
+          "title": "Our Address",
+          "textLines": ["123 Painter Street, Sector 62,", "Noida, Uttar Pradesh, India"],
+          "active": true
+        },
+        {
+          "icon": "FiPhone",
+          "title": "Contact Number",
+          "textLines": ["+91 9876543210", "Email: info@paintpro.com"],
+          "active": false
+        },
+        {
+          "icon": "FiClock",
+          "title": "Working Hours",
+          "textLines": ["Monday - Saturday: 9:00 AM - 7:00 PM", "Sunday: Closed"],
+          "active": false
+        }
+      ]
+    },
+    "formSec": {
+      "badgeText": "GET IN TOUCH",
+      "headline": {
+        "text1": "Have An Upcoming Projects?",
+        "text2": "Let's Talk to",
+        "highlight": "Now!"
+      },
+      "form": {
+        "fields": {
+          "name": "Your Name",
+          "email": "Email Address",
+          "phone": "Phone Number",
+          "subject": "Select Subjects",
+          "message": "Your Message"
+        },
+        "buttonText": "SEND MESSAGE"
+      },
+      "image": {
+        "src": "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=80",
+        "alt": "Painter showing thumbs up"
+      }
+    }
+  },
+  "serviceSidebar": {
+    "allServicesTitle": "All Services",
+    "servicesList": [
+      { "slug": "interior-painting", "name": "Interior Painting", "image": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=300&q=80" },
+      { "slug": "exterior-painting", "name": "Exterior Painting", "image": "https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=300&q=80" },
+      { "slug": "decorative-painting", "name": "Decorative Painting", "image": "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&w=300&q=80" },
+      { "slug": "wallpaper-installation", "name": "Wallpaper Installation", "image": "https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=300&q=80" },
+      { "slug": "texture-finish", "name": "Texture & Finish", "image": "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&w=300&q=80" },
+      { "slug": "commercial-painting", "name": "Commercial Painting", "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=300&q=80" }
+    ],
+    "downloadTitle": "Download",
+    "downloads": [
+      { "name": "Download Brochure", "icon": "FiFileText", "link": "#" },
+      { "name": "Painting Guide (PDF)", "icon": "FiFile", "link": "#" }
+    ]
+  },
+  "serviceDetails": {
+    "interior-painting": {
+      "slug": "interior-painting",
+      "title": { "text1": "Interior", "highlight": "Painting" },
+      "subtitle": "Give Your Interiors a Fresh and Modern Look",
+      "content": [
+        "Our interior painting services are designed to transform your indoor spaces with beautiful colors, smooth finishes, and long-lasting results. Whether it's your home, office, or commercial space, we use high-quality paints and modern techniques to enhance the look and feel of your interiors.",
+        "From simple wall painting to premium textures and designer finishes, our skilled painters ensure a clean, hassle-free, and professional service. We help you choose the right color combinations that match your style and create a space that feels fresh, vibrant, and welcoming."
+      ],
+      "mainImage": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1200&q=80",
+      "features": {
+        "title": { "text1": "Service", "highlight": "Features" },
+        "description": "We provide complete interior painting solutions with attention to detail and a focus on quality. Our services are tailored to meet your needs and deliver long-lasting, beautiful results.",
+        "list": [
+          "High-Quality & Eco-Friendly Paints",
+          "Wide Range of Color Options",
+          "Smooth and Durable Finish",
+          "Trained & Experienced Painters",
+          "Minimal Disruption to Your Routine",
+          "Clean & Hassle-Free Service",
+          "Customized Solutions for Homes & Offices",
+          "On-Time Project Completion"
+        ],
+        "image": "https://images.unsplash.com/photo-1560185127-6ed189bf02f4?auto=format&fit=crop&w=600&q=80"
+      },
+      "process": {
+        "title": { "text1": "Our", "highlight": "Painting Process" },
+        "description": "We follow a step-by-step process to ensure a smooth and hassle-free painting experience with the best quality results.",
+        "steps": [
+          { "icon": "FiMessageSquare", "title": "1. Consultation", "desc": "We understand your requirements, suggest color options, and provide a customized plan." },
+          { "icon": "FiTool", "title": "2. Surface Preparation", "desc": "Walls are cleaned, repaired (if needed), and primed for a smooth and long-lasting finish." },
+          { "icon": "FiDroplet", "title": "3. Professional Painting", "desc": "Our expert painters apply high-quality paints with precision and care." },
+          { "icon": "FiCheckCircle", "title": "4. Final Inspection", "desc": "We ensure a flawless finish and complete clean-up before handing over the space." }
+        ]
+      }
+    },
+    "exterior-painting": {
+      "slug": "exterior-painting",
+      "title": { "text1": "Exterior", "highlight": "Painting" },
+      "subtitle": "Professional Exterior Painting Services",
+      "content": [
+        "Our exterior painting services are designed to deliver exceptional results tailored to your specific needs. We use high-quality materials and proven techniques to ensure a beautiful and long-lasting finish.",
+        "Whether you are updating a single room or completing a large-scale project, our expert team is dedicated to providing a clean, efficient, and hassle-free experience from start to finish."
+      ],
+      "mainImage": "https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=300&q=80",
+      "features": {
+        "title": { "text1": "Service", "highlight": "Features" },
+        "description": "We provide comprehensive exterior painting solutions with a focus on durability, protection, and aesthetic excellence.",
+        "list": [
+          "Premium Quality Materials",
+          "Thorough Surface Preparation",
+          "Expert Application Techniques",
+          "Customized Solutions",
+          "Minimal Disruption",
+          "Clean & Professional Service",
+          "On-Time Project Completion",
+          "Guaranteed Satisfaction"
+        ],
+        "image": "https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=300&q=80"
+      },
+      "process": {
+        "title": { "text1": "Our", "highlight": "Process" },
+        "description": "We follow a meticulous step-by-step process to ensure a resilient and beautiful finish for your exterior painting project.",
+        "steps": [
+          { "icon": "FiMessageSquare", "title": "1. Consultation", "desc": "We discuss your specific needs, assess the project scope, and provide a detailed estimate." },
+          { "icon": "FiTool", "title": "2. Preparation", "desc": "We thoroughly prepare the surfaces to ensure optimal adhesion and a flawless finish." },
+          { "icon": "FiDroplet", "title": "3. Execution", "desc": "Our skilled professionals execute the work with precision, care, and attention to detail." },
+          { "icon": "FiCheckCircle", "title": "4. Inspection", "desc": "We conduct a final walk-through to ensure the results exceed your expectations." }
+        ]
+      }
+    },
+    "decorative-painting": {
+      "slug": "decorative-painting",
+      "title": { "text1": "Decorative", "highlight": "Painting" },
+      "subtitle": "Professional Decorative Painting Services",
+      "content": [
+        "Our decorative painting services are designed to deliver exceptional results tailored to your specific needs. We use high-quality materials and proven techniques to ensure a beautiful and long-lasting finish.",
+        "Whether you are updating a single room or completing a large-scale project, our expert team is dedicated to providing a clean, efficient, and hassle-free experience from start to finish."
+      ],
+      "mainImage": "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&w=300&q=80",
+      "features": {
+        "title": { "text1": "Service", "highlight": "Features" },
+        "description": "We provide comprehensive decorative painting solutions with a focus on durability, protection, and aesthetic excellence.",
+        "list": [
+          "Premium Quality Materials",
+          "Thorough Surface Preparation",
+          "Expert Application Techniques",
+          "Customized Solutions",
+          "Minimal Disruption",
+          "Clean & Professional Service",
+          "On-Time Project Completion",
+          "Guaranteed Satisfaction"
+        ],
+        "image": "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&w=300&q=80"
+      },
+      "process": {
+        "title": { "text1": "Our", "highlight": "Process" },
+        "description": "We follow a meticulous step-by-step process to ensure a resilient and beautiful finish for your decorative painting project.",
+        "steps": [
+          { "icon": "FiMessageSquare", "title": "1. Consultation", "desc": "We discuss your specific needs, assess the project scope, and provide a detailed estimate." },
+          { "icon": "FiTool", "title": "2. Preparation", "desc": "We thoroughly prepare the surfaces to ensure optimal adhesion and a flawless finish." },
+          { "icon": "FiDroplet", "title": "3. Execution", "desc": "Our skilled professionals execute the work with precision, care, and attention to detail." },
+          { "icon": "FiCheckCircle", "title": "4. Inspection", "desc": "We conduct a final walk-through to ensure the results exceed your expectations." }
+        ]
+      }
+    },
+    "wallpaper-installation": {
+      "slug": "wallpaper-installation",
+      "title": { "text1": "Wallpaper", "highlight": "Installation" },
+      "subtitle": "Professional Wallpaper Installation Services",
+      "content": [
+        "Our wallpaper installation services are designed to deliver exceptional results tailored to your specific needs. We use high-quality materials and proven techniques to ensure a beautiful and long-lasting finish.",
+        "Whether you are updating a single room or completing a large-scale project, our expert team is dedicated to providing a clean, efficient, and hassle-free experience from start to finish."
+      ],
+      "mainImage": "https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=300&q=80",
+      "features": {
+        "title": { "text1": "Service", "highlight": "Features" },
+        "description": "We provide comprehensive wallpaper installation solutions with a focus on durability, protection, and aesthetic excellence.",
+        "list": [
+          "Premium Quality Materials",
+          "Thorough Surface Preparation",
+          "Expert Application Techniques",
+          "Customized Solutions",
+          "Minimal Disruption",
+          "Clean & Professional Service",
+          "On-Time Project Completion",
+          "Guaranteed Satisfaction"
+        ],
+        "image": "https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=300&q=80"
+      },
+      "process": {
+        "title": { "text1": "Our", "highlight": "Process" },
+        "description": "We follow a meticulous step-by-step process to ensure a resilient and beautiful finish for your wallpaper installation project.",
+        "steps": [
+          { "icon": "FiMessageSquare", "title": "1. Consultation", "desc": "We discuss your specific needs, assess the project scope, and provide a detailed estimate." },
+          { "icon": "FiTool", "title": "2. Preparation", "desc": "We thoroughly prepare the surfaces to ensure optimal adhesion and a flawless finish." },
+          { "icon": "FiDroplet", "title": "3. Execution", "desc": "Our skilled professionals execute the work with precision, care, and attention to detail." },
+          { "icon": "FiCheckCircle", "title": "4. Inspection", "desc": "We conduct a final walk-through to ensure the results exceed your expectations." }
+        ]
+      }
+    },
+    "texture-finish": {
+      "slug": "texture-finish",
+      "title": { "text1": "Texture &", "highlight": "Finish" },
+      "subtitle": "Professional Texture & Finish Services",
+      "content": [
+        "Our texture & finish services are designed to deliver exceptional results tailored to your specific needs. We use high-quality materials and proven techniques to ensure a beautiful and long-lasting finish.",
+        "Whether you are updating a single room or completing a large-scale project, our expert team is dedicated to providing a clean, efficient, and hassle-free experience from start to finish."
+      ],
+      "mainImage": "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&w=300&q=80",
+      "features": {
+        "title": { "text1": "Service", "highlight": "Features" },
+        "description": "We provide comprehensive texture & finish solutions with a focus on durability, protection, and aesthetic excellence.",
+        "list": [
+          "Premium Quality Materials",
+          "Thorough Surface Preparation",
+          "Expert Application Techniques",
+          "Customized Solutions",
+          "Minimal Disruption",
+          "Clean & Professional Service",
+          "On-Time Project Completion",
+          "Guaranteed Satisfaction"
+        ],
+        "image": "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&w=300&q=80"
+      },
+      "process": {
+        "title": { "text1": "Our", "highlight": "Process" },
+        "description": "We follow a meticulous step-by-step process to ensure a resilient and beautiful finish for your texture & finish project.",
+        "steps": [
+          { "icon": "FiMessageSquare", "title": "1. Consultation", "desc": "We discuss your specific needs, assess the project scope, and provide a detailed estimate." },
+          { "icon": "FiTool", "title": "2. Preparation", "desc": "We thoroughly prepare the surfaces to ensure optimal adhesion and a flawless finish." },
+          { "icon": "FiDroplet", "title": "3. Execution", "desc": "Our skilled professionals execute the work with precision, care, and attention to detail." },
+          { "icon": "FiCheckCircle", "title": "4. Inspection", "desc": "We conduct a final walk-through to ensure the results exceed your expectations." }
+        ]
+      }
+    },
+    "commercial-painting": {
+      "slug": "commercial-painting",
+      "title": { "text1": "Commercial", "highlight": "Painting" },
+      "subtitle": "Professional Commercial Painting Services",
+      "content": [
+        "Our commercial painting services are designed to deliver exceptional results tailored to your specific needs. We use high-quality materials and proven techniques to ensure a beautiful and long-lasting finish.",
+        "Whether you are updating a single room or completing a large-scale project, our expert team is dedicated to providing a clean, efficient, and hassle-free experience from start to finish."
+      ],
+      "mainImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=300&q=80",
+      "features": {
+        "title": { "text1": "Service", "highlight": "Features" },
+        "description": "We provide comprehensive commercial painting solutions with a focus on durability, protection, and aesthetic excellence.",
+        "list": [
+          "Premium Quality Materials",
+          "Thorough Surface Preparation",
+          "Expert Application Techniques",
+          "Customized Solutions",
+          "Minimal Disruption",
+          "Clean & Professional Service",
+          "On-Time Project Completion",
+          "Guaranteed Satisfaction"
+        ],
+        "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=300&q=80"
+      },
+      "process": {
+        "title": { "text1": "Our", "highlight": "Process" },
+        "description": "We follow a meticulous step-by-step process to ensure a resilient and beautiful finish for your commercial painting project.",
+        "steps": [
+          { "icon": "FiMessageSquare", "title": "1. Consultation", "desc": "We discuss your specific needs, assess the project scope, and provide a detailed estimate." },
+          { "icon": "FiTool", "title": "2. Preparation", "desc": "We thoroughly prepare the surfaces to ensure optimal adhesion and a flawless finish." },
+          { "icon": "FiDroplet", "title": "3. Execution", "desc": "Our skilled professionals execute the work with precision, care, and attention to detail." },
+          { "icon": "FiCheckCircle", "title": "4. Inspection", "desc": "We conduct a final walk-through to ensure the results exceed your expectations." }
+        ]
+      }
+    }
+  },
+  "blogSidebar": {
+    "latestPostsTitle": "Latest Posts",
+    "latestPosts": [
+      {
+        "title": "10 Digital Marketing Strategies for 2026",
+        "date": "OCT 21, 2026",
+        "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=150&q=80",
+        "slug": "digital-marketing-strategies"
+      },
+      {
+        "title": "A Practical Guide to Building a Growth Strategy",
+        "date": "OCT 15, 2026",
+        "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=150&q=80",
+        "slug": "growth-strategy-guide"
+      },
+      {
+        "title": "How Great Design Builds Stronger Connections",
+        "date": "OCT 10, 2026",
+        "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=150&q=80",
+        "slug": "great-design-connections"
+      },
+      {
+        "title": "SEO Best Practices to Boost Your Rankings",
+        "date": "OCT 05, 2026",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=150&q=80",
+        "slug": "seo-best-practices"
+      }
+    ],
+    "categoriesTitle": "Categories",
+    "categories": [
+      { "name": "Digital Marketing", "count": "12" },
+      { "name": "SEO", "count": "08" },
+      { "name": "Social Media", "count": "10" },
+      { "name": "Content Marketing", "count": "06" },
+      { "name": "Strategy", "count": "08" },
+      { "name": "Design & Branding", "count": "05" },
+      { "name": "E-commerce", "count": "04" }
+    ]
+  },
+  "blogDetails": {
+    "trending-wall-paint-colors": {
+      "slug": "trending-wall-paint-colors",
+      "mainImage": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=80",
+      "tag": "INTERIOR PAINTING",
+      "date": "AUG 12, 2026",
+      "author": "By Priya Sharma",
+      "title": "Top 10 Trending Wall Paint Colors for Modern Homes",
+      "content1": "Explore proven strategies to increase your home's aesthetic, attract the right mood, and drive real value. The interior design landscape is constantly evolving, and homeowners need to stay ahead with the right colors. In this blog, we will explore the most effective colors that can help you refresh your living space and achieve real results in modern home design.",
+      "subtitle": "Why Color Matters Today",
+      "content2": "The design landscape is more diverse than ever, but it also offers incredible opportunities. With the right approach to choosing colors, homeowners can connect with their space, build comfort, and drive measurable improvements in daily life. It helps you set the right mood at the right time, with the right shades."
+    },
+    "best-exterior-paint": {
+      "slug": "best-exterior-paint",
+      "mainImage": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80",
+      "tag": "EXTERIOR PAINTING",
+      "date": "AUG 18, 2026",
+      "author": "By Amit Verma",
+      "title": "How to Choose the Best Exterior Paint for Your Home",
+      "content1": "Explore proven strategies to increase your home's curb appeal and protect it against the elements. The exterior paint market is constantly evolving, and homeowners need to stay ahead with the right products. In this blog, we will explore the most effective types of paint that can help you protect your home and achieve real longevity.",
+      "subtitle": "Why Exterior Protection Matters Today",
+      "content2": "The weather landscape is more unpredictable than ever, but it also offers incredible opportunities for advanced protective coatings. With the right approach to exterior painting, homeowners can defend their property, build value, and drive measurable energy savings. It helps you protect the right areas at the right time, with the right products."
+    },
+    "essential-painting-tips": {
+      "slug": "essential-painting-tips",
+      "mainImage": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1200&q=80",
+      "tag": "PAINTING TIPS",
+      "date": "AUG 25, 2026",
+      "author": "By Sneha Gupta",
+      "title": "Essential Painting Tips for a Flawless Finish",
+      "content1": "Explore proven strategies to increase your painting precision, attract the right finish, and drive real quality. The professional painting landscape is constantly evolving, and DIYers need to stay ahead with the right techniques. In this blog, we will explore the most effective approaches that can help you paint like a pro and achieve real results in any room.",
+      "subtitle": "Why Technique Matters Today",
+      "content2": "The DIY landscape is more popular than ever, but it also offers incredible opportunities for mistakes. With the right approach to painting, individuals can connect with their craft, build confidence, and drive measurable improvements in home decor. It helps you get the right finish at the right time, with the right tools."
+    },
+    "office-painting-productivity": {
+      "slug": "office-painting-productivity",
+      "mainImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+      "tag": "COMMERCIAL PAINTING",
+      "date": "SEP 02, 2026",
+      "author": "By Rohit Sharma",
+      "title": "Why Regular Office Painting Boosts Productivity",
+      "content1": "Explore proven strategies to increase your office morale, attract the right talent, and drive real growth. The corporate landscape is constantly evolving, and businesses need to stay ahead with the right environment. In this blog, we will explore the most effective office colors that can help you grow your brand and achieve real results in employee satisfaction.",
+      "subtitle": "Why Office Aesthetics Matter Today",
+      "content2": "The business landscape is more competitive than ever, but it also offers incredible opportunities for workspace optimization. With the right approach to office design, businesses can connect with their team, build trust, and drive measurable productivity. It helps you inspire the right people at the right time, with the right atmosphere."
+    },
+    "unique-texture-finishes": {
+      "slug": "unique-texture-finishes",
+      "mainImage": "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&w=1200&q=80",
+      "tag": "TEXTURE FINISH",
+      "date": "SEP 14, 2026",
+      "author": "By Neha Kapoor",
+      "title": "5 Unique Texture Finishes for Your Living Room",
+      "content1": "Explore proven strategies to increase your wall depth, attract the right ambiance, and drive real character. The interior finishing landscape is constantly evolving, and decorators need to stay ahead with the right textures. In this blog, we will explore the most effective finishes that can help you elevate your decor and achieve real uniqueness.",
+      "subtitle": "Why Texture Matters Today",
+      "content2": "The design landscape is more varied than ever, but it also offers incredible opportunities for personalization. With the right approach to wall texture, homeowners can connect with their aesthetic, build intrigue, and drive measurable beauty. It helps you create the right feel at the right time, with the right finish."
+    },
+    "faux-finishes-guide": {
+      "slug": "faux-finishes-guide",
+      "mainImage": "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&w=1200&q=80",
+      "tag": "DECORATIVE PAINTING",
+      "date": "SEP 22, 2026",
+      "author": "By Karan Malhotra",
+      "title": "The Art of Faux Finishes: A Beginner's Guide",
+      "content1": "Explore proven strategies to increase your artistic skills, attract the right visual effects, and drive real elegance. The faux painting landscape is constantly evolving, and creatives need to stay ahead with the right methods. In this blog, we will explore the most effective faux techniques that can help you mimic expensive materials and achieve real sophistication.",
+      "subtitle": "Why Faux Painting Matters Today",
+      "content2": "The decorative landscape is more accessible than ever, but it also offers incredible opportunities for budget luxury. With the right approach to faux finishes, individuals can connect with high-end looks, build value, and drive measurable elegance. It helps you get the right look at the right time, with the right technique."
+    }
+  },
+  "topbar": {
+    "welcomeMessage": "Welcome to Professional Painting Services",
+    "timing": "Mon - Sat: 8:00 AM - 7:00 PM",
+    "socialLinks": [
+      { "platform": "facebook", "url": "#" },
+      { "platform": "instagram", "url": "#" },
+      { "platform": "youtube", "url": "#" },
+      { "platform": "linkedin", "url": "#" }
+    ]
+  },
+  "navbar": {
+    "logo": {
+      "alt": "PaintPro Painting Solutions"
+    },
+    "links": [
+      { "label": "Home", "url": "/", "hasDropdown": false, "active": true },
+      { "label": "About Us", "url": "/about", "hasDropdown": false },
+      { "label": "Our Services", "url": "/service", "hasDropdown": true },
+      { "label": "Gallery", "url": "/gallery", "hasDropdown": false },
+      { "label": "FAQ", "url": "/faq", "hasDropdown": false },
+      { "label": "Contact Us", "url": "/contact", "hasDropdown": false }
+    ],
+    "contactButton": {
+      "phone": "Get a Quote",
+      "url": "/quote"
+    }
+  },
+  "quotesection": {
+    "bgImage": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1600&q=80",
+    "badgeText": "GET A FREE QUOTE",
+    "headline": {
+      "line1": "Looking For A",
+      "highlight": "Quality",
+      "line2": "Painter?"
+    },
+    "button": {
+      "text": "Get A Quote",
+      "link": "/quote"
+    }
+  }
+}
