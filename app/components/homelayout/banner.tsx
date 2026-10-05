@@ -1,7 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { HiOutlineShieldCheck } from 'react-icons/hi2';
 import { HiOutlineUsers } from 'react-icons/hi';
 import { FiClock, FiArrowUpRight } from 'react-icons/fi';
@@ -18,17 +19,75 @@ const iconMap: Record<string, React.ElementType> = {
   FiClock,
 };
 
+function AnimatedStat({ valueStr }: { valueStr: string }) {
+  const [count, setCount] = useState(0);
+  const [hasStarted, setHasStarted] = useState(false);
+
+  useEffect(() => {
+    setHasStarted(true);
+    const endValue = parseInt(valueStr.replace(/\D/g, ''), 10);
+    if (isNaN(endValue)) return;
+
+    let startTime: number | null = null;
+    const duration = 2000;
+
+    const animate = (time: number) => {
+      if (!startTime) startTime = time;
+      const progress = Math.min((time - startTime) / duration, 1);
+      const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+      
+      setCount(Math.floor(easeProgress * endValue));
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [valueStr]);
+
+  if (!hasStarted) return <>{valueStr}</>;
+
+  const endValue = parseInt(valueStr.replace(/\D/g, ''), 10);
+  if (isNaN(endValue)) return <>{valueStr}</>;
+
+  const suffix = valueStr.replace(/[0-9,]/g, '');
+  const hasComma = valueStr.includes(',');
+  const displayCount = hasComma ? count.toLocaleString() : count;
+
+  return <>{displayCount}{suffix}</>;
+}
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2 }
+  }
+};
+
 export default function HeroBanner() {
   if (!banner) return null;
   return (
     <section className="relative w-full bg-white pt-8 pb-16 lg:pt-12 font-sans overflow-hidden">
 
       {/* 1. TOP TEXT & FORM SECTION */}
-      <div className="max-w-[1350px] mx-auto px-4 sm:px-4 md:px-6 lg:px-8 relative z-20">
+      <motion.div 
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        className="max-w-[1350px] mx-auto px-4 sm:px-4 md:px-6 lg:px-8 relative z-20"
+      >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
 
           {/* Left Column: Heading & 3 Feature Badges */}
-          <div className="lg:col-span-7 flex flex-col justify-between pb-4">
+          <motion.div variants={fadeInUp} className="lg:col-span-7 flex flex-col justify-between pb-4">
             <div>
               {/* Badge with red line */}
               <div className="flex items-center gap-2 mb-4">
@@ -64,11 +123,11 @@ export default function HeroBanner() {
               })}
 
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Column: Floating Card Overlapping Image Below */}
           {/* Right Column: Floating Card Overlapping Image Below */}
-          <div className="lg:col-span-5 flex justify-start lg:justify-end relative z-30 translate-y-4 sm:translate-y-8 lg:translate-y-12">
+          <motion.div variants={fadeInUp} className="lg:col-span-5 flex justify-start lg:justify-end relative z-30 translate-y-4 sm:translate-y-8 lg:translate-y-12">
             <div className="bg-[#FAF7F2] rounded-3xl p-7 sm:p-8 shadow-xl border border-[#F0EBE1] max-w-[380px] w-full">
 
               <span className="text-[14px] font-bold uppercase tracking-[0.25em] text-[#69707D] block mb-2">
@@ -98,13 +157,19 @@ export default function HeroBanner() {
               </a>
 
             </div>
-          </div>
+          </motion.div>
 
         </div>
-      </div>
+      </motion.div>
 
       {/* 2. FULL WIDTH BANNER IMAGE */}
-      <div className="relative w-full h-[450px] sm:h-[550px] lg:h-[650px] bg-neutral-100 z-10">
+      <motion.div 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.8 }}
+        className="relative w-full h-[450px] sm:h-[550px] lg:h-[650px] bg-neutral-100 z-10 mt-4 sm:mt-0"
+      >
 
         {/* Unsplash Painter Image */}
         <Image
@@ -158,7 +223,9 @@ export default function HeroBanner() {
               {banner.stats.map((stat, idx) => (
                 <React.Fragment key={idx}>
                   <div className="text-center">
-                    <h4 className="text-[32px] font-extrabold text-[#FF3B1D] tracking-tight leading-none">{stat.value}</h4>
+                    <h4 className="text-[32px] font-extrabold text-[#FF3B1D] tracking-tight leading-none">
+                      <AnimatedStat valueStr={stat.value} />
+                    </h4>
                     <p className="text-[13px] font-semibold text-[#0D1527] mt-2 leading-snug">
                       {stat.labelLines[0]} <br /> {stat.labelLines[1]}
                     </p>
@@ -202,7 +269,7 @@ export default function HeroBanner() {
 
         </div>
 
-      </div>
+      </motion.div>
 
       {/* Spacer taaki agla section overlap na ho */}
       <div className="h-16 sm:h-20"></div>

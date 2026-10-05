@@ -5,11 +5,26 @@ import Link from "next/link";
 import { FiArrowUpRight } from "react-icons/fi";
 import { site } from '@/data/index';
 import type { PaintQuoteCtaData as QuoteSecData } from '@/data/index';
+import { motion } from "framer-motion";
 
 const quotesection: QuoteSecData = site.quoteCta;
 
 export default function QuoteSec() {
   if (!quotesection) return null;
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
   return (
     <section className={`relative w-full h-[320px] md:h-[320px] overflow-hidden flex items-center mt-12`}>
       {/* Background Image & Overlay */}
@@ -26,10 +41,16 @@ export default function QuoteSec() {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+      <motion.div 
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-8"
+      >
         
         {/* Left Side: Texts */}
-        <div>
+        <motion.div variants={fadeInUp}>
           <div className="flex items-center gap-4 mb-4">
             <span className="text-[13px] md:text-[14px] font-bold tracking-[0.2em] text-[#ff8c00] uppercase">
               {quotesection.badgeText}
@@ -42,10 +63,10 @@ export default function QuoteSec() {
             <br />
             <span className="text-[#ff8c00]">{quotesection.headline.highlight}</span> {quotesection.headline.line2}
           </h2>
-        </div>
+        </motion.div>
 
         {/* Right Side: Button */}
-        <div className="md:pr-10 lg:pr-20">
+        <motion.div variants={fadeInUp} className="md:pr-10 lg:pr-20">
           <Link 
             href={quotesection.button.link}
             className="inline-flex items-center gap-2 bg-[#f48512] text-white font-semibold text-[15px] px-8 py-4 hover:bg-[#e07710] transition-colors shadow-lg"
@@ -53,9 +74,9 @@ export default function QuoteSec() {
             {quotesection.button.text}
             <FiArrowUpRight className="w-5 h-5 ml-1 stroke-[2.5]" />
           </Link>
-        </div>
+        </motion.div>
         
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -1,9 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { FaChevronRight } from "react-icons/fa";
 import { site } from '@/data/index';
 import type { PaintSubBannersData as SubBannersData } from '@/data/index';
 import { SubbannerItem } from '@/types/paint';
+import { motion } from "framer-motion";
 
 
 const subbanners: SubBannersData = site.subBanners;
@@ -17,6 +20,19 @@ export default function Subbanner({ pageKey }: SubbannerProps) {
   const data: SubbannerItem = (subbanners as any)[pageKey];
 
   if (!data) return null;
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
 
   return (
     <div className={`relative h-[300px] md:h-[360px] w-full overflow-hidden flex items-center`}>
@@ -35,11 +51,17 @@ export default function Subbanner({ pageKey }: SubbannerProps) {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 lg:px-10">
-        <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
+      <motion.div 
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        className="relative z-10 mx-auto w-full max-w-[1400px] px-6 lg:px-10"
+      >
+        <motion.h1 variants={fadeInUp} className="text-4xl md:text-6xl font-bold text-white tracking-tight">
           {data.title}
-        </h1>
-        <div className="mt-6 flex items-center gap-4">
+        </motion.h1>
+        <motion.div variants={fadeInUp} className="mt-6 flex items-center gap-4">
           <span className="h-6 w-1.5 bg-red-600" />
           <div className="flex items-center text-[15px] font-medium text-slate-300">
             {data.breadcrumbs.map((crumb, index) => (
@@ -54,8 +76,8 @@ export default function Subbanner({ pageKey }: SubbannerProps) {
               </div>
             ))}
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { FiCheckCircle, FiMessageSquare, FiTool, FiDroplet } from "react-icons/fi";
 import { FiChevronRight } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 const ICONS: Record<string, any> = {
   FiMessageSquare,
@@ -9,20 +10,39 @@ const ICONS: Record<string, any> = {
 };
 
 export default function ProcessSection({ processData }: { processData: any }) {
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 }
+    }
+  };
+
   return (
-    <div className="mt-10">
-      <h2 className="text-3xl font-extrabold text-[#0b1a3a] mb-4">
+    <motion.div 
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
+      className="mt-10"
+    >
+      <motion.h2 variants={fadeInUp} className="text-3xl font-extrabold text-[#0b1a3a] mb-4">
         {processData.title.text1} <span className="text-orange-500">{processData.title.highlight}</span>
-      </h2>
-      <p className="text-[15px] leading-relaxed text-slate-500 mb-4 max-w-3xl">
+      </motion.h2>
+      <motion.p variants={fadeInUp} className="text-[15px] leading-relaxed text-slate-500 mb-4 max-w-3xl">
         {processData.description}
-      </p>
+      </motion.p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
         {processData.steps.map((step: any, i: number) => {
           const Icon = ICONS[step.icon];
           return (
-            <div key={i} className="relative bg-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] rounded-xl p-8 text-center flex flex-col items-center">
+            <motion.div variants={fadeInUp} key={i} className="relative bg-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] rounded-xl p-8 text-center flex flex-col items-center">
               
               {/* Dashed Arrow between cards */}
               {i !== processData.steps.length - 1 && (
@@ -37,10 +57,10 @@ export default function ProcessSection({ processData }: { processData: any }) {
               </div>
               <h4 className="text-[18px] font-bold text-[#0b1a3a] mb-3 relative z-10">{step.title}</h4>
               <p className="text-[14px] leading-relaxed text-slate-500 relative z-10">{step.desc}</p>
-            </div>
+            </motion.div>
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 }

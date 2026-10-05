@@ -6,6 +6,7 @@ import { FiCheckCircle, FiMessageSquare, FiTool, FiDroplet, FiFileText, FiFile, 
 import { site } from '@/data/index';
 import type { PaintServiceSidebarData as ServiceSidebarData } from '@/data/index';
 import ProcessSection from './processsec';
+import { motion } from "framer-motion";
 
 
 const serviceSidebar: ServiceSidebarData = site.serviceSidebar;
@@ -23,13 +24,32 @@ export default function ServiceDetailSection({ data: detail }: { data: any }) {
   if (!detail) return null;
   const slug = detail.slug;
 
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
   return (
     <section className={`mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
-      <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
+      <motion.div 
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.05 }}
+        className="mx-auto max-w-[1400px] px-6 lg:px-10"
+      >
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-12 lg:gap-16 items-start">
           
           {/* Main Content (Left) */}
-          <div className="space-y-12">
+          <motion.div variants={fadeInUp} className="space-y-12">
             
             {/* Top Image & Intro */}
             <div>
@@ -91,10 +111,10 @@ export default function ServiceDetailSection({ data: detail }: { data: any }) {
               </div>
             </div>
 
-          </div>
+          </motion.div>
 
           {/* Sidebar (Right) */}
-          <div className="space-y-10 lg:sticky lg:top-8">
+          <motion.div variants={fadeInUp} className="space-y-10 lg:sticky lg:top-8">
             
             {/* All Services */}
             <div className="bg-slate-50 rounded-[30px] p-8">
@@ -160,13 +180,13 @@ export default function ServiceDetailSection({ data: detail }: { data: any }) {
               </ul>
             </div>
 
-          </div>
+          </motion.div>
 
         </div>
 
         {/* Full Width Process Section below Sidebar & Main Content */}
         <ProcessSection processData={detail.process} />
-      </div>
+      </motion.div>
     </section>
   );
 }

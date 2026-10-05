@@ -16,10 +16,9 @@ import {
   FiArrowRight,
   FiChevronDown,
 } from "react-icons/fi";
-
-
 import { site } from '@/data/index';
 import type { PaintQuotePageData as QuotePageSecData } from '@/data/index';
+import { motion } from "framer-motion";
 
 const quotePageSec: QuotePageSecData = site.quoteSec;
 
@@ -55,11 +54,30 @@ export default function QuoteSection() {
     console.log(form);
   };
 
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
   return (
     <section className={`mt-8 sm:mt-10 md:mt-12 lg:mt-14 mb-4`}>
-      <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-10 px-6 lg:grid-cols-[1.45fr_0.75fr] lg:px-10">
+      <motion.div 
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        className="mx-auto grid max-w-[1400px] grid-cols-1 gap-10 px-6 lg:grid-cols-[1.45fr_0.75fr] lg:px-10"
+      >
         {/* LEFT */}
-        <div>
+        <motion.div variants={fadeInUp}>
           <div className="flex items-center gap-3">
             <span className="text-xs font-semibold tracking-[0.18em] text-orange-600 uppercase">{quotePageSec.badgeText}</span>
             <span className="h-[3px] w-10 rounded-full bg-orange-600" />
@@ -81,16 +99,17 @@ export default function QuoteSection() {
               {quotePageSec.features.map(({ icon, title, text }) => {
                 const Icon = ICONS[icon];
                 return (
-                <li key={title} className="flex items-center gap-4 border-b border-slate-100 py-4 last:border-0">
-                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-orange-100/70">
-                    {Icon && <Icon className="h-6 w-6 text-orange-600" />}
-                  </span>
-                  <span>
-                    <span className="block text-[15px] font-semibold text-[#0b1a3a]">{title}</span>
-                    <span className="block text-[13px] leading-snug text-slate-500">{text}</span>
-                  </span>
-                </li>
-              )})}
+                  <li key={title} className="flex items-center gap-4 border-b border-slate-100 py-4 last:border-0">
+                    <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-orange-100/70">
+                      {Icon && <Icon className="h-6 w-6 text-orange-600" />}
+                    </span>
+                    <span>
+                      <span className="block text-[15px] font-semibold text-[#0b1a3a]">{title}</span>
+                      <span className="block text-[13px] leading-snug text-slate-500">{text}</span>
+                    </span>
+                  </li>
+                )
+              })}
             </ul>
 
             {/* form card */}
@@ -154,10 +173,10 @@ export default function QuoteSection() {
               </form>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* RIGHT: image + promo */}
-        <div className="relative lg:pt-0">
+        <motion.div variants={fadeInUp} className="relative lg:pt-0">
           <span className="absolute -left-3 top-6 hidden h-24 w-4 -rotate-[15deg] rounded-full bg-orange-500 lg:block" />
           <div className="relative h-[420px] overflow-hidden rounded-2xl sm:h-[520px] lg:h-[560px]">
             <Image src={quotePageSec.image.src} alt={quotePageSec.image.alt} fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover" priority />
@@ -175,8 +194,8 @@ export default function QuoteSection() {
                   {quotePageSec.card.text}
                 </p>
               </div>
-              <span className="hidden h-24 w-24 shrink-0 items-center justify-center rounded-2xl bg-white shadow-sm sm:flex">
-                <GiPaintBucket className="h-14 w-14 text-orange-600" />
+              <span className="hidden h-20 w-20 sm:flex overflow-hidden">
+                <Image src={quotePageSec.card.iconImage.src} alt={quotePageSec.card.iconImage.alt} width={100} height={100} className="object-contain" />
               </span>
             </div>
 
@@ -184,21 +203,22 @@ export default function QuoteSection() {
               {quotePageSec.card.promoServices.map(({ icon, a, b }) => {
                 const Icon = ICONS[icon];
                 return (
-                <div key={a} className="flex items-center gap-2.5">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-sm">
-                    {Icon && <Icon className="h-4 w-4 text-orange-600" />}
-                  </span>
-                  <span className="text-[12px] font-semibold leading-tight text-[#0b1a3a]">
-                    {a}
-                    <br />
-                    {b}
-                  </span>
-                </div>
-              )})}
+                  <div key={a} className="flex items-center gap-2.5">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-sm">
+                      {Icon && <Icon className="h-4 w-4 text-orange-600" />}
+                    </span>
+                    <span className="text-[12px] font-semibold leading-tight text-[#0b1a3a]">
+                      {a}
+                      <br />
+                      {b}
+                    </span>
+                  </div>
+                )
+              })}
             </div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

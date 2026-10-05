@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Crown, BadgeCheck, Users, Clock, Headphones, Paintbrush } from "lucide-react";
+import { motion } from "framer-motion";
 import { site } from '@/data/index';
 import type { PaintAboutPageData as AboutSecData } from '@/data/index';
 import { AboutSecFeature } from '@/types/paint';
@@ -21,12 +22,31 @@ export default function AboutSec() {
   if (!aboutsec) return null;
   const FloatingIcon = iconMap[aboutsec.floatingCard.icon];
 
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
   return (
     <section className={`relative mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
-      <div className="mx-auto max-w-[1450px] px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-14 items-stretch">
+      <motion.div 
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        className="mx-auto max-w-[1450px] px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-14 items-stretch"
+      >
         
         {/* LEFT: Image Section */}
-        <div className="relative w-full min-h-[400px] h-full">
+        <motion.div variants={fadeInUp} className="relative w-full min-h-[400px] h-full">
           {/* Decorative dots top */}
           <div
             className="absolute -top-6 left-1/4 h-20 w-32 opacity-30 z-0"
@@ -45,10 +65,10 @@ export default function AboutSec() {
           {/* Accent strokes (simulated with CSS shapes for aesthetic) */}
           <div className="absolute -left-6 top-8 w-24 h-48 bg-orange-500 rounded-full opacity-20 blur-2xl z-0"></div>
           <div className="absolute -bottom-10 left-10 w-40 h-10 bg-orange-500 rounded-full opacity-30 blur-xl z-0 transform -rotate-12"></div>
-        </div>
+        </motion.div>
 
         {/* RIGHT: Content Section */}
-        <div>
+        <motion.div variants={fadeInUp}>
           {/* Badge */}
           <div className="flex items-center gap-3">
             <Crown className="w-5 h-5 text-orange-600" />
@@ -127,8 +147,8 @@ export default function AboutSec() {
             </div>
           </div>
 
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

@@ -8,7 +8,7 @@ export default function AboutPage() {
     <main>
       <Subbanner pageKey="about" />
       <div className="mt-8 sm:mt-10 md:mt-12 lg:mt-14">
-        <AboutSection/>
+        <AboutSection hideButton={true} />
       </div>
       <HowItWorksSection/>
             <AboutSec />

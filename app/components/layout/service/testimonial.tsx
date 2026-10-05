@@ -6,6 +6,7 @@ import { FaQuoteLeft, FaStar } from "react-icons/fa";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { site } from '@/data/index';
 import type { PaintTestimonialData as TestimonialData } from '@/data/index';
+import { motion } from "framer-motion";
 import { TestimonialItem } from '@/types/paint';
 
 
@@ -22,6 +23,19 @@ export default function TestimonialsSection() {
   const prev = () => setPage((p) => (p - 1 + pages) % pages);
   const next = () => setPage((p) => (p + 1) % pages);
   const visible = testimonial.testimonials.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE);
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 }
+    }
+  };
 
   return (
     <section className={`relative overflow-hidden mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
@@ -42,9 +56,15 @@ export default function TestimonialsSection() {
         style={{ backgroundImage: "radial-gradient(#94a3b8 1.8px, transparent 1.8px)", backgroundSize: "24px 24px" }}
       />
 
-      <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10">
+      <motion.div 
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        className="relative mx-auto max-w-[1400px] px-6 lg:px-10"
+      >
         {/* Heading */}
-        <div className="mx-auto max-w-3xl text-center">
+        <motion.div variants={fadeInUp} className="mx-auto max-w-3xl text-center">
           <div className="flex items-center justify-center gap-4">
             <span className="h-[3px] w-10 rounded-full bg-orange-600" />
             <span className="text-sm font-semibold tracking-[0.2em] text-[#0b1a3a]">{testimonial.badgeText}</span>
@@ -56,7 +76,7 @@ export default function TestimonialsSection() {
           <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-slate-500">
             {testimonial.description}
           </p>
-        </div>
+        </motion.div>
 
         {/* Slider */}
         <div className="relative mt-8 md:px-14">
@@ -126,7 +146,7 @@ export default function TestimonialsSection() {
             />
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

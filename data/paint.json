@@ -56,8 +56,8 @@
               }
             ],
             "contactButton": {
-              "phone": "Get a Quote",
-              "url": "/quote"
+              "phone": "Contact Us",
+              "url": "/contact"
             }
           }
         }
@@ -263,7 +263,7 @@
               "titleHighlight": "Home Rakshak",
               "description": "Our team is committed to delivering exceptional painting services, backed by years of experience, precise preparation, and a true passion for transforming spaces with flawless finishes.",
               "buttonText": "Get a Quote",
-              "buttonLink": "#quote"
+              "buttonLink": "/quote"
             },
             "heroImage": {
               "src": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2000&auto=format&fit=crop",
@@ -434,7 +434,7 @@
             },
             "description": "From touch-ups to full makeovers, we offer reliable service, fair pricing, and a hassle-free experience — exactly how you want it!",
             "buttonText": "All Services",
-            "buttonLink": "/services",
+            "buttonLink": "/service",
             "list": [
               {
                 "icon": "PaintRoller",
@@ -914,6 +914,10 @@
               "title1": "Transform Your Space",
               "highlight": "New Colors!",
               "text": "Get a personalized quote for your home or office painting project today.",
+              "iconImage": {
+                "src": "/card1.png",
+                "alt": "Bucket Icon"
+              },
               "promoServices": [
                 {
                   "icon": "FaHome",
@@ -948,19 +952,19 @@
               {
                 "name": "Rohit Sharma",
                 "role": "Homeowner, Noida",
-                "text": "PaintPro did an amazing job on our home interior. The team was professional, on time, and the quality of work exceeded our expectations. Our house looks completely refreshed!",
+                "text": "PaintPro did an amazing job on our home interior. The team was professional, on time, and the quality of work exceeded our expectations.!",
                 "img": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&crop=faces&w=200&h=200&q=80"
               },
               {
                 "name": "Priya Mehta",
                 "role": "Apartment Owner, Delhi",
-                "text": "Excellent service and great attention to detail. They helped us choose the right color combinations and delivered a flawless finish. Highly recommended for anyone looking for reliable painters.",
+                "text": "Excellent service and great attention to detail. They helped us choose the right color combinations and delivered a flawless finish. Highly recommended.",
                 "img": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&crop=faces&w=200&h=200&q=80"
               },
               {
                 "name": "Amit Verma",
                 "role": "Business Owner, Gurgaon",
-                "text": "We hired PaintPro for our office renovation and the results are fantastic. The team finished the work on time with minimal disruption. Professional, clean, and high-quality work.",
+                "text": "We hired PaintPro for our office renovation and the results are fantastic. The team finished the work on time with minimal.",
                 "img": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&crop=faces&w=200&h=200&q=80"
               },
               {
@@ -1037,8 +1041,8 @@
                   "icon": "FiMapPin",
                   "title": "Our Address",
                   "textLines": [
-                    "123 Painter Street, Sector 62,",
-                    "Noida, Uttar Pradesh, India"
+                    "123 Painter Street, Street,",
+                    "New York, USA"
                   ],
                   "active": true
                 },
@@ -1046,8 +1050,8 @@
                   "icon": "FiPhone",
                   "title": "Contact Number",
                   "textLines": [
-                    "+91 9876543210",
-                    "Email: info@paintpro.com"
+                    "+1 9876543210",
+                    "Email: dummy@xyz.com"
                   ],
                   "active": false
                 },
@@ -1217,17 +1221,17 @@
               {
                 "icon": "FaPhoneAlt",
                 "label": "Phone Number",
-                "value": "+91 98765 43210"
+                "value": "+1 98765 43210"
               },
               {
                 "icon": "FaEnvelope",
                 "label": "Email Address",
-                "value": "info@paintpro.com"
+                "value": "dummy@xyz.com"
               },
               {
                 "icon": "FaMapMarkerAlt",
                 "label": "Address Location",
-                "value": "123, Main Street, New Delhi, India"
+                "value": "123, Main Street, New York, USA"
               }
             ],
             "quickLinks": [
@@ -1241,7 +1245,7 @@
               },
               {
                 "name": "Our Services",
-                "href": "/services"
+                "href": "/service"
               },
               {
                 "name": "Gallery",
@@ -1261,13 +1265,34 @@
               }
             ],
             "services": [
-              "Interior Painting",
-              "Exterior Painting",
-              "Commercial Painting",
-              "Decorative Painting",
-              "Wallpaper Installation",
-              "Texture & Finish",
-              "Color Consultation"
+              {
+                "name": "Interior Painting",
+                "href": "/service/interior-painting"
+              },
+              {
+                "name": "Exterior Painting",
+                "href": "/service/exterior-painting"
+              },
+              {
+                "name": "Commercial Painting",
+                "href": "/service/commercial-painting"
+              },
+              {
+                "name": "Decorative Painting",
+                "href": "/service/decorative-painting"
+              },
+              {
+                "name": "Wallpaper Installation",
+                "href": "/service/wallpaper-installation"
+              },
+              {
+                "name": "Texture & Finish",
+                "href": "/service/texture-finish"
+              },
+              {
+                "name": "Color Consultation",
+                "href": "/service/color-consultation"
+              }
             ],
             "posts": [
               {
@@ -1294,27 +1319,27 @@
               {
                 "icon": "FaFacebookF",
                 "label": "Facebook",
-                "href": "#"
+                "href": "https://www.facebook.com/"
               },
               {
                 "icon": "FaXTwitter",
                 "label": "X",
-                "href": "#"
+                "href": "https://www.x.com/"
               },
               {
                 "icon": "FaLinkedinIn",
                 "label": "LinkedIn",
-                "href": "#"
+                "href": "https://www.linkedin.com/"
               },
               {
                 "icon": "FaInstagram",
                 "label": "Instagram",
-                "href": "#"
+                "href": "https://www.instagram.com/"
               },
               {
                 "icon": "FaYoutube",
                 "label": "YouTube",
-                "href": "#"
+                "href": "https://www.youtube.com/"
               }
             ]
           }

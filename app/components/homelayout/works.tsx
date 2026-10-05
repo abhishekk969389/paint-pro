@@ -11,6 +11,7 @@ import {
 import { site } from '@/data/index';
 import type { PaintHowItWorksData as WorksData } from '@/data/index';
 import { WorkStep } from '@/types/paint';
+import { motion } from 'framer-motion';
 
 
 const works: WorksData = site.howItWorks;
@@ -33,6 +34,19 @@ function Arrow() {
   );
 }
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2 }
+  }
+};
+
 export default function HowItWorksSection() {
   if (!works) return null;
   return (
@@ -47,9 +61,15 @@ export default function HowItWorksSection() {
         style={{ backgroundImage: "radial-gradient(#cbd5e1 1.5px, transparent 1.5px)", backgroundSize: "14px 14px" }}
       />
 
-      <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10">
+      <motion.div 
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        className="relative mx-auto max-w-[1400px] px-6 lg:px-10"
+      >
         {/* Heading */}
-        <div className="mx-auto max-w-3xl text-center">
+        <motion.div variants={fadeInUp} className="mx-auto max-w-3xl text-center">
           <div className="flex items-center justify-center gap-3">
             <span className="h-[3px] w-10 rounded-full bg-orange-600" />
             <span className="text-sm font-semibold tracking-[0.2em] text-[#0b1a3a]">{works.badgeText}</span>
@@ -62,7 +82,7 @@ export default function HowItWorksSection() {
           <p className="mx-auto mt-2 max-w-2xl text-[15px] leading-relaxed text-slate-500">
             {works.description}
           </p>
-        </div>
+        </motion.div>
 
         {/* Steps */}
         <div className="mt-8 flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:justify-between lg:gap-0">
@@ -73,7 +93,7 @@ export default function HowItWorksSection() {
 
             return (
               <div key={s.no} className="contents">
-                <div className="flex w-full max-w-[250px] flex-col items-center text-center">
+                <motion.div variants={fadeInUp} className="flex w-full max-w-[250px] flex-col items-center text-center">
                   <div className="relative">
                     {/* outer dashed ring */}
                     <div className={`flex h-44 w-44 items-center justify-center rounded-full border border-dashed ${t.ring}`}>
@@ -98,7 +118,7 @@ export default function HowItWorksSection() {
 
                   <h3 className="mt-8 text-lg font-bold text-[#0b1a3a]">{s.title}</h3>
                   <p className="mt-2 text-[14.5px] leading-relaxed text-slate-500">{s.text}</p>
-                </div>
+                </motion.div>
 
                 {i < works.steps.length - 1 && (
                   <div className="mt-20 hidden shrink-0 lg:block">
@@ -109,7 +129,7 @@ export default function HowItWorksSection() {
             );
           })}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

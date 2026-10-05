@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Check, ArrowRight, PaintRoller, House, Building2, Brush } from "lucide-react";
+import { motion } from "framer-motion";
 import { site } from '@/data/index';
 import type { PaintServicesData as ServicesData } from '@/data/index';
 import { ServiceItem } from '@/types/paint';
@@ -17,13 +18,32 @@ const iconMap: Record<string, React.ElementType> = {
   Brush
 };
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2 }
+  }
+};
+
 export default function ServicesSection() {
   if (!services) return null;
   return (
     <section className={`bg-white mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
-      <div className="mx-auto grid max-w-[1400px] grid-cols-1 items-start gap-10 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-10">
+      <motion.div 
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        className="mx-auto grid max-w-[1400px] grid-cols-1 items-start gap-10 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-10"
+      >
         {/* LEFT */}
-        <div>
+        <motion.div variants={fadeInUp}>
           <div className="flex items-center gap-3">
             <span className="h-[3px] w-12 rounded-full bg-orange-600" />
             <span className="text-sm font-semibold tracking-[0.18em] text-[#0b1a3a]">{services.badgeText}</span>
@@ -47,18 +67,18 @@ export default function ServicesSection() {
               <ArrowRight className="h-5 w-5 text-orange-600" />
             </span>
           </a>
-        </div>
+        </motion.div>
 
         {/* RIGHT: service cards */}
         <div className="space-y-5">
           {services.list.map((item: ServiceItem) => {
             const Icon = iconMap[item.icon];
             return (
-              <Link
-                key={item.title}
-                href={`/service/${item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-                className={`group relative flex flex-col items-stretch gap-5 overflow-hidden rounded-xl p-5 shadow-sm md:flex-row md:items-center transition-shadow hover:shadow-md ${item.cardBg}`}
-              >
+              <motion.div variants={fadeInUp} key={item.title}>
+                <Link
+                  href={`/service/${item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                  className={`group relative flex flex-col items-stretch gap-5 overflow-hidden rounded-xl p-5 shadow-sm md:flex-row md:items-center transition-shadow hover:shadow-md ${item.cardBg}`}
+                >
                 <div className={`flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl transition-transform group-hover:scale-105 ${item.iconBg}`}>
                   {Icon && <Icon className="h-10 w-10 text-orange-600" strokeWidth={2} />}
                 </div>
@@ -88,11 +108,12 @@ export default function ServicesSection() {
                   </div>
                   <span className={`absolute -right-2 top-10 h-36 w-3 rotate-[6deg] rounded-full transition-transform group-hover:scale-110 ${item.bar}`} />
                 </div>
-              </Link>
+                </Link>
+              </motion.div>
             );
           })}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

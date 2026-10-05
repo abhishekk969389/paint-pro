@@ -17,11 +17,11 @@ const Topbar = () => {
   if (!topbar) return null;
   return (
     <div className="bg-[#0B2F4C] text-white py-2 px-4 md:px-8 flex  flex-col md:flex-row justify-between items-center text-sm font-medium">
-      <div className="flex items-center space-x-2 mb-2 md:mb-0">
-        <FaMapMarkerAlt className="text-[#F97316] text-lg" />
-        <span>{topbar.welcomeMessage}</span>
+      <div className="flex items-center space-x-2 mb-0 md:mb-0">
+        <FaMapMarkerAlt className="text-[#F97316] text-base md:text-lg shrink-0" />
+        <span className="text-xs md:text-sm text-center">{topbar.welcomeMessage}</span>
       </div>
-      <div className="flex items-center space-x-6">
+      <div className="hidden md:flex items-center space-x-6">
         <div className="flex items-center space-x-2">
           <FaClock className="text-[#F97316] text-lg" />
           <span>{topbar.timing}</span>

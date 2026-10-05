@@ -5,6 +5,7 @@ import Image from "next/image";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { site } from '@/data/index';
 import type { PaintFaqData as FaqSecData } from '@/data/index';
+import { motion } from "framer-motion";
 
 const faqSec: FaqSecData = site.faqSec;
 
@@ -17,13 +18,32 @@ export default function FaqSection() {
 
   if (!faqSec) return null;
 
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
   return (
     <section className={`mt-8 sm:mt-10 md:mt-12 lg:mt-14 relative`}>
-      <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
+      <motion.div 
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        className="mx-auto max-w-[1400px] px-6 lg:px-10"
+      >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
           
           {/* Left Column - Image with decorators */}
-          <div className="relative h-full">
+          <motion.div variants={fadeInUp} className="relative h-full">
             {/* Dot Pattern Top Left */}
             <div className="absolute -top-6 -left-6 w-24 h-24 bg-[radial-gradient(#fed7aa_3px,transparent_3px)] [background-size:12px_12px] opacity-70 z-0"></div>
             
@@ -42,10 +62,10 @@ export default function FaqSection() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Column - Text & Accordion */}
-          <div>
+          <motion.div variants={fadeInUp}>
             <div className="flex items-center gap-3">
               <span className="text-xs font-bold tracking-[0.15em] text-orange-500 uppercase">
                 {faqSec.badgeText}
@@ -109,10 +129,10 @@ export default function FaqSection() {
                 );
               })}
             </div>
-          </div>
+          </motion.div>
 
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

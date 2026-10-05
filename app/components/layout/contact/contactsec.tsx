@@ -6,6 +6,7 @@ import { FiMapPin, FiPhone, FiClock, FiUser, FiMail, FiEdit2 } from "react-icons
 import { RiArrowRightLine, RiArrowDownSLine } from "react-icons/ri";
 import { site } from '@/data/index';
 import type { PaintContactPageData as ContactSecData } from '@/data/index';
+import { motion } from "framer-motion";
 
 const contactSec: ContactSecData = site.contactSec;
 
@@ -25,15 +26,34 @@ export default function ContactSection() {
     console.log(form);
   };
 
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
   return (
     <section className={`mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
-      <div className="mx-auto max-w-[1400px] px-6 lg:px-10 space-y-20 lg:space-y-28">
+      <motion.div 
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        className="mx-auto max-w-[1400px] px-6 lg:px-10 space-y-20 lg:space-y-28"
+      >
 
         {/* Info & Map Section */}
         <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-12 lg:gap-16 items-stretch">
 
           {/* Left - Contact Info */}
-          <div className="flex flex-col justify-center">
+          <motion.div variants={fadeInUp} className="flex flex-col justify-center">
             <h2 className="text-3xl font-bold text-[#0b1a3a] mb-8">{contactSec.info.title}</h2>
 
             <div className="space-y-5">
@@ -56,10 +76,10 @@ export default function ContactSection() {
                 );
               })}
             </div>
-          </div>
+          </motion.div>
 
           {/* Right - Map */}
-          <div className="mt-6 sm:mt-8 md:mt-10 h-full">
+          <motion.div variants={fadeInUp} className="mt-6 sm:mt-8 md:mt-10 h-full">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224356.85923192592!2d77.23701088488971!3d28.522404036526275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1786345160037!5m2!1sen!2sin"
               width="100%"
@@ -70,14 +90,14 @@ export default function ContactSection() {
               loading="lazy"
               referrerPolicy="strict-origin-when-cross-origin"
             />
-          </div>
+          </motion.div>
         </div>
 
         {/* Form & Image Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* Left - Form */}
-          <div>
+          <motion.div variants={fadeInUp}>
             <div className="flex items-center gap-3">
               <span className="text-xs font-bold tracking-[0.15em] text-orange-500 uppercase">
                 {contactSec.formSec.badgeText}
@@ -135,10 +155,10 @@ export default function ContactSection() {
                 {contactSec.formSec.form.buttonText} <RiArrowRightLine className="h-5 w-5" />
               </button>
             </form>
-          </div>
+          </motion.div>
 
           {/* Right - Image */}
-          <div className="relative h-[500px] lg:h-[600px] w-full rounded-[30px] overflow-hidden shadow-2xl">
+          <motion.div variants={fadeInUp} className="relative h-[500px] lg:h-[600px] w-full rounded-[30px] overflow-hidden shadow-2xl">
             <Image
               src={contactSec.formSec.image.src}
               alt={contactSec.formSec.image.alt}
@@ -147,10 +167,10 @@ export default function ContactSection() {
               sizes="(max-width: 1024px) 100vw, 50vw"
               priority
             />
-          </div>
+          </motion.div>
 
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

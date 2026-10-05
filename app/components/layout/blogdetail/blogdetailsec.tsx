@@ -1,8 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { FiCalendar, FiUser } from "react-icons/fi";
 import { site } from '@/data/index';
 import type { PaintBlogSidebarData as BlogSidebarData } from '@/data/index';
+import { motion } from "framer-motion";
 
 
 const blogSidebar: BlogSidebarData = site.blogSidebar;
@@ -10,13 +13,32 @@ const blogSidebar: BlogSidebarData = site.blogSidebar;
 export default function BlogDetailSection({ detail }: { detail: any }) {
   if (!detail) return null;
 
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 }
+    }
+  };
+
   return (
     <section className={` mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
-      <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
+      <motion.div 
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.05 }}
+        className="mx-auto max-w-[1400px] px-6 lg:px-10"
+      >
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-12 lg:gap-16 items-start">
           
           {/* Main Content (Left) */}
-          <div className="space-y-8">
+          <motion.div variants={fadeInUp} className="space-y-8">
             
             {/* Top Image */}
             <div className="relative w-full aspect-[16/9] rounded-[30px] overflow-hidden shadow-sm">
@@ -60,10 +82,10 @@ export default function BlogDetailSection({ detail }: { detail: any }) {
               </p>
             </div>
 
-          </div>
+          </motion.div>
 
           {/* Sidebar (Right) */}
-          <div className="space-y-12 lg:sticky lg:top-8">
+          <motion.div variants={fadeInUp} className="space-y-12 lg:sticky lg:top-8">
             
             {/* Latest Posts */}
             <div>
@@ -95,10 +117,10 @@ export default function BlogDetailSection({ detail }: { detail: any }) {
             </div>
 
 
-          </div>
+          </motion.div>
 
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { PaintBucket, Home, Paintbrush, FileImage, Hammer, Building2, ArrowRight } from "lucide-react";
 import { site } from '@/data/index';
 import type { PaintServicesPageData as ServiceSecData } from '@/data/index';
+import { motion } from "framer-motion";
 import { ServiceSecCard } from '@/types/paint';
 
 
@@ -21,12 +22,32 @@ const iconMap: Record<string, React.ElementType> = {
 
 export default function ServiceSec() {
     if (!servicesec) return null;
+
+    const fadeInUp = {
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+    };
+
+    const staggerContainer = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.2 }
+        }
+    };
+
     return (
         <section className={`relative mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
-            <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
+            <motion.div 
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+                className="mx-auto max-w-[1400px] px-6 lg:px-10"
+            >
 
                 {/* Header Section */}
-                <div className="text-center max-w-3xl mx-auto mb-6">
+                <motion.div variants={fadeInUp} className="text-center max-w-3xl mx-auto mb-6">
                     <div className="flex items-center justify-center gap-4">
                         <span className="h-[2px] w-12 bg-orange-200" />
                         <span className="text-sm font-semibold tracking-[0.2em] text-[#0b1a3a]">{servicesec.badgeText}</span>
@@ -38,7 +59,7 @@ export default function ServiceSec() {
                     <p className="mx-auto mt-2 max-w-2xl text-[15px] leading-relaxed text-slate-500">
                         {servicesec.description}
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -46,9 +67,9 @@ export default function ServiceSec() {
                         const Icon = iconMap[card.icon];
 
                         return (
-                            <Link
-                                href={`/service/${card.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-                                key={card.title}
+                            <motion.div variants={fadeInUp} key={card.title}>
+                                <Link
+                                    href={`/service/${card.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
                                 className="block group relative bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-300"
                             >
                                 {/* Image Section */}
@@ -84,11 +105,12 @@ export default function ServiceSec() {
                                     </div>
                                 </div>
                             </Link>
+                            </motion.div>
                         );
                     })}
                 </div>
 
-            </div>
+            </motion.div>
         </section>
     );
 }
