@@ -61,10 +61,10 @@ export default function GallerySection({ showAll = false }: { showAll?: boolean 
       <Image
         src="/sidebrush.png"
         alt=""
-        width={420}
-        height={300}
+        width={200}
+        height={190}
         aria-hidden="true"
-        className="pointer-events-none absolute right-0 top-0 hidden w-[260px] select-none md:block lg:w-[340px]"
+        className="pointer-events-none absolute right-0 top-0 hidden w-[220px] select-none md:block lg:w-[250px]"
         priority
       />
 
