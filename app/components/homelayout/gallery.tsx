@@ -30,8 +30,8 @@ export default function GallerySection({ showAll = false }: { showAll?: boolean 
 
   if (!gallery) return null;
 
-  const displayedProjects = showAll 
-    ? gallery.projects.slice(0, visibleCount) 
+  const displayedProjects = showAll
+    ? gallery.projects.slice(0, visibleCount)
     : gallery.projects.slice(0, 8);
 
   const handleLoadMore = () => {
@@ -40,14 +40,14 @@ export default function GallerySection({ showAll = false }: { showAll?: boolean 
 
   const openLightbox = (index: number) => setLightboxIndex(index);
   const closeLightbox = () => setLightboxIndex(null);
-  
+
   const nextImage = (e: React.MouseEvent) => {
     e.stopPropagation();
     if (lightboxIndex !== null) {
       setLightboxIndex((lightboxIndex + 1) % displayedProjects.length);
     }
   };
-  
+
   const prevImage = (e: React.MouseEvent) => {
     e.stopPropagation();
     if (lightboxIndex !== null) {
@@ -74,7 +74,7 @@ export default function GallerySection({ showAll = false }: { showAll?: boolean 
         style={{ backgroundImage: "radial-gradient(#cbd5e1 1.5px, transparent 1.5px)", backgroundSize: "14px 14px" }}
       />
 
-      <motion.div 
+      <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
@@ -98,9 +98,9 @@ export default function GallerySection({ showAll = false }: { showAll?: boolean 
         {/* Grid */}
         <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {displayedProjects.map((p: GalleryProject, idx: number) => (
-            <motion.div 
+            <motion.div
               variants={fadeInUp}
-              key={idx} 
+              key={idx}
               className="relative aspect-[6/5] overflow-hidden rounded-2xl shadow-sm cursor-pointer group"
               onClick={() => openLightbox(idx)}
             >
@@ -148,12 +148,12 @@ export default function GallerySection({ showAll = false }: { showAll?: boolean 
 
       {/* Lightbox Modal */}
       {lightboxIndex !== null && (
-        <div 
+        <div
           className="fixed inset-0 z-[100] flex items-center justify-center bg-[#1a1a1a]/95 p-4 sm:p-8"
           onClick={closeLightbox}
         >
           {/* Close button */}
-          <button 
+          <button
             className="absolute top-4 sm:top-6 right-4 sm:right-6 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
             onClick={closeLightbox}
           >
@@ -161,7 +161,7 @@ export default function GallerySection({ showAll = false }: { showAll?: boolean 
           </button>
 
           {/* Prev button */}
-          <button 
+          <button
             className="absolute left-2 sm:left-8 top-1/2 z-50 flex h-10 w-10 sm:h-12 sm:w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
             onClick={prevImage}
           >
@@ -169,7 +169,7 @@ export default function GallerySection({ showAll = false }: { showAll?: boolean 
           </button>
 
           {/* Next button */}
-          <button 
+          <button
             className="absolute right-2 sm:right-8 top-1/2 z-50 flex h-10 w-10 sm:h-12 sm:w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
             onClick={nextImage}
           >
