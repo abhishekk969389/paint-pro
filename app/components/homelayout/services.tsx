@@ -35,7 +35,7 @@ export default function ServicesSection() {
   if (!services) return null;
   return (
     <section className={`bg-white mt-8 sm:mt-10 md:mt-12 lg:mt-14`}>
-      <motion.div 
+      <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
@@ -79,35 +79,35 @@ export default function ServicesSection() {
                   href={`/service/${item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
                   className={`group relative flex flex-col items-stretch gap-5 overflow-hidden rounded-xl p-5 shadow-sm md:flex-row md:items-center transition-shadow hover:shadow-md ${item.cardBg}`}
                 >
-                <div className={`flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl transition-transform group-hover:scale-105 ${item.iconBg}`}>
-                  {Icon && <Icon className="h-10 w-10 text-orange-600" strokeWidth={2} />}
-                </div>
-
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-[#0b1a3a]">{item.title}</h3>
-                  <p className="mt-2 max-w-sm text-[15px] leading-relaxed text-slate-500">{item.text}</p>
-                  <ul className="mt-4 space-y-2.5">
-                    {item.points.map((p) => (
-                      <li key={p} className="flex items-center gap-3 text-[15px] text-[#0b1a3a]">
-                        <span className="flex h-5 w-5 items-center justify-center rounded-full bg-orange-600">
-                          <Check className="h-3 w-3 text-white" strokeWidth={4} />
-                        </span>
-                        {p}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* slanted image + accent bar */}
-                <div className="relative h-56 w-full shrink-0 md:h-64 md:w-[300px]">
-                  <div
-                    className="absolute inset-0 overflow-hidden"
-                    style={{ clipPath: "polygon(14% 0, 100% 0, 86% 100%, 0 100%)" }}
-                  >
-                    <Image src={item.image.src} alt={item.image.alt} fill sizes="300px" className="object-cover" />
+                  <div className={`flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl transition-transform group-hover:scale-105 ${item.iconBg}`}>
+                    {Icon && <Icon className="h-10 w-10 text-orange-600" strokeWidth={2} />}
                   </div>
-                  <span className={`absolute -right-2 top-10 h-36 w-3 rotate-[6deg] rounded-full transition-transform group-hover:scale-110 ${item.bar}`} />
-                </div>
+
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-[#0b1a3a]">{item.title}</h3>
+                    <p className="mt-2 max-w-sm text-[15px] leading-relaxed text-slate-500">{item.text}</p>
+                    <ul className="mt-4 space-y-2.5">
+                      {item.points.map((p) => (
+                        <li key={p} className="flex items-center gap-3 text-[15px] text-[#0b1a3a]">
+                          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-orange-600">
+                            <Check className="h-3 w-3 text-white" strokeWidth={4} />
+                          </span>
+                          {p}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* slanted image + accent bar */}
+                  <div className="relative h-56 w-full shrink-0 md:h-64 md:w-[300px]">
+                    <div
+                      className="absolute inset-0 overflow-hidden"
+                      style={{ clipPath: "polygon(14% 0, 100% 0, 86% 100%, 0 100%)" }}
+                    >
+                      <Image src={item.image.src} alt={item.image.alt} fill sizes="300px" className="object-cover" />
+                    </div>
+                    <span className={`absolute -right-2 top-10 h-36 w-3 rotate-[6deg] rounded-full transition-transform group-hover:scale-110 ${item.bar}`} />
+                  </div>
                 </Link>
               </motion.div>
             );
