@@ -25,16 +25,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${poppins.variable} ${poppins.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <SmoothScroll>
-          <header className="sticky top-0 z-50 w-full flex flex-col bg-white">
-            <Topbar />
-            <Navbar />
-          </header>
-          <div className="flex-grow">
-            {children}
-          </div>
-          <Footer/>
-        </SmoothScroll>
+        <header className="sticky top-0 z-50 w-full flex flex-col bg-white shadow-sm">
+          <Topbar />
+          <Navbar />
+        </header>
+        <div className="flex-grow">
+          {children}
+        </div>
+        <Footer/>
       </body>
     </html>
   );
