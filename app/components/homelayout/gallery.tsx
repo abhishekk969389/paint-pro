@@ -118,7 +118,10 @@ export default function GallerySection({ showAll = false }: { showAll?: boolean 
         <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {displayedProjects.map((p: GalleryProject, idx: number) => (
             <motion.div
-              variants={fadeInUp}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
               key={idx}
               className="group relative aspect-[6/5] cursor-pointer overflow-hidden rounded-2xl shadow-sm"
               onClick={() => setLightboxIndex(idx)}
@@ -139,13 +142,16 @@ export default function GallerySection({ showAll = false }: { showAll?: boolean 
         {showAll ? (
           visibleCount < gallery.projects.length && (
             <motion.div
-              variants={fadeInUp}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
               className="mt-12 flex items-center justify-center gap-2 sm:gap-6"
             >
               <span className="h-px w-8 bg-slate-300 sm:w-24" />
               <button
                 onClick={handleLoadMore}
-                className="inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-orange-600 to-red-500 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-orange-500/30 transition hover:brightness-105 sm:px-9"
+                className="inline-flex cursor-pointer items-center gap-4 rounded-full bg-gradient-to-r from-orange-600 to-red-500 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-orange-500/30 transition hover:brightness-105 sm:px-9"
               >
                 Load More Images
                 <FiArrowRight className="h-5 w-5" />
@@ -155,7 +161,10 @@ export default function GallerySection({ showAll = false }: { showAll?: boolean 
           )
         ) : (
           <motion.div
-            variants={fadeInUp}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
             className="mt-12 flex items-center justify-center gap-2 sm:gap-6"
           >
             <span className="h-px w-8 bg-slate-300 sm:w-24" />
@@ -183,7 +192,7 @@ export default function GallerySection({ showAll = false }: { showAll?: boolean 
             {/* Close */}
             <button
               aria-label="Close"
-              className="absolute right-4 top-4 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20 sm:right-6 sm:top-6"
+              className="absolute  right-4 top-4 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20 sm:right-6 sm:top-6"
               onClick={(e) => {
                 e.stopPropagation();
                 closeLightbox();

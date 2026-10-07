@@ -56,8 +56,8 @@
               }
             ],
             "contactButton": {
-              "phone": "Contact Us",
-              "url": "/contact"
+              "phone": "+1 0000000",
+              "url": "tel:+10000000"
             }
           }
         }
@@ -1018,14 +1018,6 @@
               {
                 "q": "Will you move furniture before painting?",
                 "a": "Yes, we handle all the heavy lifting. We carefully move your furniture and cover it completely with protective sheets to ensure zero damage or paint spills."
-              },
-              {
-                "q": "Is there any warranty on the painting work?",
-                "a": "Absolutely. We stand by our quality and offer a comprehensive warranty on our painting services against peeling or blistering."
-              },
-              {
-                "q": "Can you match an existing color?",
-                "a": "Yes, we use advanced color-matching technology to perfectly replicate your existing wall color for seamless touch-ups."
               }
             ]
           }
@@ -1050,7 +1042,7 @@
                   "icon": "FiPhone",
                   "title": "Contact Number",
                   "textLines": [
-                    "+1 9876543210",
+                    "+1 0000000000",
                     "Email: dummy@xyz.com"
                   ],
                   "active": false
@@ -1221,7 +1213,7 @@
               {
                 "icon": "FaPhoneAlt",
                 "label": "Phone Number",
-                "value": "+1 98765 43210"
+                "value": "+1 0000000000"
               },
               {
                 "icon": "FaEnvelope",

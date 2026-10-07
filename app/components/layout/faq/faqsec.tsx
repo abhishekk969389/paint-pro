@@ -40,10 +40,14 @@ export default function FaqSection() {
         viewport={{ once: true, amount: 0.1 }}
         className="mx-auto max-w-[1400px] px-6 lg:px-10"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
+        {/* items-start: columns no longer stretch to each other's height */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           
-          {/* Left Column - Image with decorators */}
-          <motion.div variants={fadeInUp} className="relative h-full">
+          {/* Left Column - Fixed height image (does not change when accordion opens) */}
+          <motion.div
+            variants={fadeInUp}
+            className="relative h-[380px] sm:h-[460px] lg:h-[600px] w-full self-start shrink-0"
+          >
             {/* Dot Pattern Top Left */}
             <div className="absolute -top-6 -left-6 w-24 h-24 bg-[radial-gradient(#fed7aa_3px,transparent_3px)] [background-size:12px_12px] opacity-70 z-0"></div>
             
@@ -53,7 +57,7 @@ export default function FaqSection() {
             {/* Background Blob */}
             <div className="absolute top-4 left-4 right-4 bottom-4 bg-[#fff1e3] rounded-3xl -rotate-2 z-0 transform scale-105"></div>
 
-            <div className="relative z-10 rounded-3xl overflow-hidden h-full shadow-xl min-h-[500px]">
+            <div className="relative z-10 h-full rounded-3xl overflow-hidden shadow-xl">
               <Image 
                 src={faqSec.image.src} 
                 alt={faqSec.image.alt}
